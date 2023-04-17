@@ -66,6 +66,10 @@
 		6E7C181029E858D100960CA3 /* Foot Prints */ = {
 			isa = PBXGroup;
 			children = (
+				6E7C183429ED8D1F00960CA3 /* Views */,
+				6E7C183329ED8CC700960CA3 /* Controllers */,
+				6E7C183229ED8CBC00960CA3 /* Models */,
+				6E7C183029ED8C6D00960CA3 /* Storyboards */,
 				6E7C181129E858D100960CA3 /* AppDelegate.swift */,
 				6E7C181329E858D100960CA3 /* SceneDelegate.swift */,
 				6E7C181529E858D100960CA3 /* ViewController.swift */,
@@ -76,6 +80,34 @@
 				6E7C182529ED839900960CA3 /* GoogleService-Info.plist */,
 			);
 			path = "Foot Prints";
+			sourceTree = "<group>";
+		};
+		6E7C183029ED8C6D00960CA3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6E7C183229ED8CBC00960CA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E7C183329ED8CC700960CA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6E7C183429ED8D1F00960CA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

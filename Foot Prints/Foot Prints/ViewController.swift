@@ -13,7 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    // Don't use this ViewController file so we can prevent merge conflicts, make a new file and put it in the Views folder.
 }
 
