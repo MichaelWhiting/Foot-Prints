@@ -20,6 +20,7 @@
 		6E7C182F29ED84C500960CA3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C182E29ED84C500960CA3 /* FirebaseFirestore */; };
 		6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C183729ED94A600960CA3 /* TestViewController.swift */; };
 		97F3344729EEE484003099EB /* Ryder's File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3344629EEE484003099EB /* Ryder's File.swift */; };
+		FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6E7C182529ED839900960CA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E7C183729ED94A600960CA3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		97F3344629EEE484003099EB /* Ryder's File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ryder's File.swift"; sourceTree = "<group>"; };
+		FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptainRedBeard.swift; path = "Foot Prints/CaptainRedBeard.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		6E7C183029ED8C6D00960CA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */,
 				97F3344729EEE484003099EB /* Ryder's File.swift in Sources */,
 				6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */,
+				FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */,
 				6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
