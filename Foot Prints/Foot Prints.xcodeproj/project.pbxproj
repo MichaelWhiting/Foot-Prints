@@ -10,7 +10,6 @@
 		6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181129E858D100960CA3 /* AppDelegate.swift */; };
 		6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181329E858D100960CA3 /* SceneDelegate.swift */; };
 		6E7C181629E858D100960CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181529E858D100960CA3 /* ViewController.swift */; };
-		6E7C181929E858D100960CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C181729E858D100960CA3 /* Main.storyboard */; };
 		6E7C181B29E858D200960CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C181A29E858D200960CA3 /* Assets.xcassets */; };
 		6E7C181E29E858D200960CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C181C29E858D200960CA3 /* LaunchScreen.storyboard */; };
 		6E7C182629ED839900960CA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C182529ED839900960CA3 /* GoogleService-Info.plist */; };
@@ -19,8 +18,10 @@
 		6E7C182D29ED84C500960CA3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C182C29ED84C500960CA3 /* FirebaseDatabase */; };
 		6E7C182F29ED84C500960CA3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C182E29ED84C500960CA3 /* FirebaseFirestore */; };
 		6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C183729ED94A600960CA3 /* TestViewController.swift */; };
-		6EC5D41429F029E800288478 /* SignInVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5D41329F029E800288478 /* SignInVC.storyboard */; };
-		6EC5D41629F02A5700288478 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41529F02A5700288478 /* CustomColors.swift */; };
+		6EC5D41429F029E800288478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5D41329F029E800288478 /* Main.storyboard */; };
+		6EC5D41929F177B500288478 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41829F177B500288478 /* SignInViewController.swift */; };
+		6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41A29F177D800288478 /* SignUpViewController.swift */; };
+		6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */; };
 		FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,14 +30,15 @@
 		6E7C181129E858D100960CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7C181329E858D100960CA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E7C181529E858D100960CA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E7C181829E858D100960CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E7C181A29E858D200960CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E7C181D29E858D200960CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E7C181F29E858D200960CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E7C182529ED839900960CA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E7C183729ED94A600960CA3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		6EC5D41329F029E800288478 /* SignInVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInVC.storyboard; sourceTree = "<group>"; };
-		6EC5D41529F02A5700288478 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		6EC5D41329F029E800288478 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6EC5D41829F177B500288478 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6EC5D41A29F177D800288478 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptainRedBeard.swift; path = "Foot Prints/CaptainRedBeard.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -81,7 +83,6 @@
 				6E7C181129E858D100960CA3 /* AppDelegate.swift */,
 				6E7C181329E858D100960CA3 /* SceneDelegate.swift */,
 				6E7C181529E858D100960CA3 /* ViewController.swift */,
-				6E7C181729E858D100960CA3 /* Main.storyboard */,
 				6E7C183729ED94A600960CA3 /* TestViewController.swift */,
 				6E7C181A29E858D200960CA3 /* Assets.xcassets */,
 				6E7C181C29E858D200960CA3 /* LaunchScreen.storyboard */,
@@ -94,7 +95,7 @@
 		6E7C183029ED8C6D00960CA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				6EC5D41129F0281700288478 /* UserAccountInfo */,
+				6EC5D41129F0281700288478 /* Michael's Storyboards */,
 				FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */,
 			);
 			path = Storyboards;
@@ -103,7 +104,6 @@
 		6E7C183229ED8CBC00960CA3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6EC5D41529F02A5700288478 /* CustomColors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,12 +122,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6EC5D41129F0281700288478 /* UserAccountInfo */ = {
+		6EC5D41129F0281700288478 /* Michael's Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				6EC5D41329F029E800288478 /* SignInVC.storyboard */,
+				6EC5D41729F1779C00288478 /* ViewControllers */,
+				6EC5D41329F029E800288478 /* Main.storyboard */,
 			);
-			path = UserAccountInfo;
+			path = "Michael's Storyboards";
+			sourceTree = "<group>";
+		};
+		6EC5D41729F1779C00288478 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6EC5D41829F177B500288478 /* SignInViewController.swift */,
+				6EC5D41A29F177D800288478 /* SignUpViewController.swift */,
+				6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC5D41429F029E800288478 /* SignInVC.storyboard in Resources */,
+				6EC5D41429F029E800288478 /* Main.storyboard in Resources */,
 				6E7C181E29E858D200960CA3 /* LaunchScreen.storyboard in Resources */,
 				6E7C182629ED839900960CA3 /* GoogleService-Info.plist in Resources */,
 				6E7C181B29E858D200960CA3 /* Assets.xcassets in Resources */,
-				6E7C181929E858D100960CA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,11 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC5D41929F177B500288478 /* SignInViewController.swift in Sources */,
 				6E7C181629E858D100960CA3 /* ViewController.swift in Sources */,
+				6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */,
 				6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */,
 				6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */,
+				6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */,
 				FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */,
-				6EC5D41629F02A5700288478 /* CustomColors.swift in Sources */,
 				6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,14 +236,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6E7C181729E858D100960CA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E7C181829E858D100960CA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6E7C181C29E858D200960CA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
