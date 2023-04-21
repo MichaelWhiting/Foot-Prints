@@ -126,6 +126,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pYa-jt-dLJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T39-1c-ZXx">
                                 <rect key="frame" x="76.666666666666686" y="567.33333333333337" width="240" height="60"/>
@@ -181,6 +184,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7dj-5r-fGX"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="i36-nr-ba6" id="onR-rI-qU0"/>
+                        <outlet property="passwordTextField" destination="29U-v5-fLf" id="hEq-cX-2rW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,6 +263,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendResetLinkButtonTapped:" destination="Lcp-1V-cki" eventType="touchUpInside" id="B5X-J5-mXd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ljI-Mc-Ifv"/>
@@ -275,15 +285,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zB3-Du-jgM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="hys-PE-9B2" id="QUT-GK-ae1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLh-n4-6M6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="731"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="C2c-aF-yV5">
             <objects>
-                <viewController id="wv3-ga-A5Z" customClass="SignInViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wv3-ga-A5Z" customClass="SignUpViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uOR-6n-Obb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,6 +413,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="wv3-ga-A5Z" eventType="touchUpInside" id="4lO-Je-Ba1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SfX-TQ-f5C"/>
@@ -425,6 +441,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cMC-hP-Uzx"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="qR5-2w-dBN" id="jJx-l9-11T"/>
+                        <outlet property="emailTextField" destination="EVo-YI-xSC" id="Y1U-1Z-Rx7"/>
+                        <outlet property="passwordTextField" destination="11a-mN-1fU" id="b2T-BF-GjK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lym-oD-bu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
