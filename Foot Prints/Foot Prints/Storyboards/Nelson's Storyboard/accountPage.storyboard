@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-32-3qh">
+                                <rect key="frame" x="76" y="80" width="240" height="128"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="@boe-bogdin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejw-V1-Y22">
+                                <rect key="frame" x="112" y="216" width="169" height="44"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-zq-a0E">
+                                <rect key="frame" x="142" y="318.33333333333331" width="109" height="50.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dmw-Dn-QO5">
+                                <rect key="frame" x="15" y="389" width="363" height="41"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y74-AH-bUX">
+                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="41" height="38"/>
+                                        <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="LHW-Oi-mTq"/>
+                                            <constraint firstAttribute="height" constant="41" id="Sv0-wN-Yza"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuM-0i-nyS">
+                                        <rect key="frame" x="42" y="0.0" width="279" height="41"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Hot Springs"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-TH-PPK">
+                                        <rect key="frame" x="322" y="1.6666666666666643" width="41" height="38"/>
+                                        <color key="tintColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="KhL-k0-mPk"/>
+                                            <constraint firstAttribute="height" constant="41" id="a1p-Bm-LWD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Y74-AH-bUX" firstAttribute="leading" secondItem="dmw-Dn-QO5" secondAttribute="leading" id="8FK-Q4-p6C"/>
+                                    <constraint firstItem="wmM-TH-PPK" firstAttribute="top" secondItem="dmw-Dn-QO5" secondAttribute="top" id="HwW-cD-UMo"/>
+                                    <constraint firstItem="Y74-AH-bUX" firstAttribute="top" secondItem="dmw-Dn-QO5" secondAttribute="top" id="Nj0-qb-W2V"/>
+                                    <constraint firstAttribute="trailing" secondItem="wmM-TH-PPK" secondAttribute="trailing" id="amq-zc-gtZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y74-AH-bUX" secondAttribute="bottom" id="o8w-hk-wWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="wmM-TH-PPK" secondAttribute="bottom" id="wah-hS-QXV"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-kP-CQB">
+                                <rect key="frame" x="15" y="438" width="364" height="41"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xKf-PK-x9h">
+                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="41" height="38"/>
+                                        <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="atu-il-nLY"/>
+                                            <constraint firstAttribute="height" constant="41" id="db8-6q-HN8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-8w-4iK">
+                                        <rect key="frame" x="125" y="0.0" width="114" height="41"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Hot Springs"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-mh-Yua">
+                                        <rect key="frame" x="323" y="1.6666666666666643" width="41" height="38"/>
+                                        <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="262-7h-1Xg"/>
+                                            <constraint firstAttribute="height" constant="41" id="C8s-h5-aBn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dmw-Dn-QO5" firstAttribute="centerX" secondItem="Uoc-32-3qh" secondAttribute="centerX" id="An6-hs-L6O"/>
+                            <constraint firstItem="dmw-Dn-QO5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="GTm-nH-Ibz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dmw-Dn-QO5" secondAttribute="bottom" constant="388" id="GoX-2x-8WS"/>
+                            <constraint firstItem="dmw-Dn-QO5" firstAttribute="centerX" secondItem="7Wa-zq-a0E" secondAttribute="centerX" id="JHV-CV-wk8"/>
+                            <constraint firstItem="dmw-Dn-QO5" firstAttribute="centerX" secondItem="Ejw-V1-Y22" secondAttribute="centerX" id="j2a-PH-38l"/>
+                            <constraint firstItem="dmw-Dn-QO5" firstAttribute="top" secondItem="7Wa-zq-a0E" secondAttribute="bottom" constant="20" id="nSI-ac-spa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dmw-Dn-QO5" secondAttribute="trailing" constant="15" id="uKv-N7-nDG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="-64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location.square.fill" catalog="system" width="128" height="114"/>
+        <image name="mappin.square.fill" catalog="system" width="128" height="114"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
+</document>
