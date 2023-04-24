@@ -54,13 +54,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m4n-Rd-PgO">
-                                <rect key="frame" x="50" y="377.33333333333331" width="293" height="40"/>
+                                <rect key="frame" x="50" y="377.33333333333331" width="293" height="39"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29U-v5-fLf">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="28"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +68,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-pR-iDB">
-                                        <rect key="frame" x="0.0" y="39" width="293" height="1"/>
+                                        <rect key="frame" x="0.0" y="38" width="293" height="1"/>
                                         <color key="backgroundColor" red="0.69411764705882351" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="d80-N6-2sv"/>
@@ -80,7 +80,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQj-Ct-gYw">
-                                <rect key="frame" x="116.66666666666669" y="652.33333333333337" width="160" height="40"/>
+                                <rect key="frame" x="116.66666666666669" y="651.33333333333337" width="160" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="izT-Av-QI7"/>
                                     <constraint firstAttribute="width" constant="160" id="qBF-mU-cSZ"/>
@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYr-6t-vyJ">
-                                <rect key="frame" x="126.66666666666669" y="487.33333333333326" width="140" height="60"/>
+                                <rect key="frame" x="126.66666666666669" y="486.33333333333326" width="140" height="60"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="3qH-Vx-jF5"/>
@@ -126,9 +126,12 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pYa-jt-dLJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T39-1c-ZXx">
-                                <rect key="frame" x="76.666666666666686" y="567.33333333333337" width="240" height="60"/>
+                                <rect key="frame" x="76.666666666666686" y="566.33333333333337" width="240" height="60"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ebu-Qp-XdU"/>
@@ -181,6 +184,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7dj-5r-fGX"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="i36-nr-ba6" id="onR-rI-qU0"/>
+                        <outlet property="passwordTextField" destination="29U-v5-fLf" id="hEq-cX-2rW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,6 +263,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendResetLinkButtonTapped:" destination="Lcp-1V-cki" eventType="touchUpInside" id="B5X-J5-mXd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ljI-Mc-Ifv"/>
@@ -275,15 +285,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zB3-Du-jgM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="hys-PE-9B2" id="QUT-GK-ae1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLh-n4-6M6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="731"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="C2c-aF-yV5">
             <objects>
-                <viewController id="wv3-ga-A5Z" customClass="SignInViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wv3-ga-A5Z" customClass="SignUpViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uOR-6n-Obb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,12 +339,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-nd-6lf">
-                                <rect key="frame" x="50" y="377.33333333333331" width="293" height="35"/>
+                                <rect key="frame" x="50" y="377.33333333333331" width="293" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11a-mN-1fU">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="28"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -339,7 +352,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2W-He-enw">
-                                        <rect key="frame" x="0.0" y="34" width="293" height="1"/>
+                                        <rect key="frame" x="0.0" y="33" width="293" height="1"/>
                                         <color key="backgroundColor" red="0.69411764710000001" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="7ja-xa-5ZF"/>
@@ -351,12 +364,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-wn-scs">
-                                <rect key="frame" x="50" y="462.33333333333331" width="293" height="35"/>
+                                <rect key="frame" x="50" y="461.33333333333331" width="293" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qR5-2w-dBN">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="28"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,7 +377,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngm-be-O1a">
-                                        <rect key="frame" x="0.0" y="34" width="293" height="1"/>
+                                        <rect key="frame" x="0.0" y="33" width="293" height="1"/>
                                         <color key="backgroundColor" red="0.69411764710000001" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6o1-78-53k"/>
@@ -376,7 +389,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-JD-yXy">
-                                <rect key="frame" x="76.666666666666686" y="572.33333333333337" width="240" height="60"/>
+                                <rect key="frame" x="76.666666666666686" y="570.33333333333337" width="240" height="60"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="J79-XR-kM6"/>
@@ -400,6 +413,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="wv3-ga-A5Z" eventType="touchUpInside" id="4lO-Je-Ba1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SfX-TQ-f5C"/>
@@ -425,6 +441,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cMC-hP-Uzx"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="qR5-2w-dBN" id="jJx-l9-11T"/>
+                        <outlet property="emailTextField" destination="EVo-YI-xSC" id="Y1U-1Z-Rx7"/>
+                        <outlet property="passwordTextField" destination="11a-mN-1fU" id="b2T-BF-GjK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lym-oD-bu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
