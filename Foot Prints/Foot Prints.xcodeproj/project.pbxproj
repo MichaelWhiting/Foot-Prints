@@ -18,15 +18,12 @@
 		6E7C182D29ED84C500960CA3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C182C29ED84C500960CA3 /* FirebaseDatabase */; };
 		6E7C182F29ED84C500960CA3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C182E29ED84C500960CA3 /* FirebaseFirestore */; };
 		6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C183729ED94A600960CA3 /* TestViewController.swift */; };
-<<<<<<< HEAD
 		6EC5D41429F029E800288478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5D41329F029E800288478 /* Main.storyboard */; };
 		6EC5D41929F177B500288478 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41829F177B500288478 /* SignInViewController.swift */; };
 		6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41A29F177D800288478 /* SignUpViewController.swift */; };
 		6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */; };
-=======
 		9746650529F04A5A008DF877 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9746650429F04A5A008DF877 /* Home.storyboard */; };
 		9746650729F04D7B008DF877 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746650629F04D7B008DF877 /* MapViewController.swift */; };
->>>>>>> 9ff527f (home screen commit)
 		FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */; };
 		FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7E2DE729F18D850051318D /* accountPage.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,15 +38,12 @@
 		6E7C181F29E858D200960CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E7C182529ED839900960CA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E7C183729ED94A600960CA3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		6EC5D41329F029E800288478 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6EC5D41829F177B500288478 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6EC5D41A29F177D800288478 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-=======
 		9746650429F04A5A008DF877 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9746650629F04D7B008DF877 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
->>>>>>> 9ff527f (home screen commit)
 		FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptainRedBeard.swift; path = "Foot Prints/CaptainRedBeard.swift"; sourceTree = SOURCE_ROOT; };
 		FD7E2DE729F18D850051318D /* accountPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accountPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,9 +82,6 @@
 		6E7C181029E858D100960CA3 /* Foot Prints */ = {
 			isa = PBXGroup;
 			children = (
-				6E7C183429ED8D1F00960CA3 /* Views */,
-				6E7C183329ED8CC700960CA3 /* Controllers */,
-				6E7C183229ED8CBC00960CA3 /* Models */,
 				6E7C183029ED8C6D00960CA3 /* Storyboards */,
 				6E7C181129E858D100960CA3 /* AppDelegate.swift */,
 				6E7C181329E858D100960CA3 /* SceneDelegate.swift */,
@@ -107,43 +98,14 @@
 		6E7C183029ED8C6D00960CA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-<<<<<<< HEAD
 				6EC5D41129F0281700288478 /* Michael's Storyboards */,
-=======
 				FDBF496629F0331200DCE2E0 /* Nelson's Storyboard */,
->>>>>>> 24513d5 (accountPage UI finished)
-=======
 				9746650329F049DE008DF877 /* Ryder's Storyboards */,
->>>>>>> 9ff527f (home screen commit)
 				FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		6E7C183229ED8CBC00960CA3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		6E7C183329ED8CC700960CA3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		6E7C183429ED8D1F00960CA3 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-<<<<<<< HEAD
-<<<<<<< HEAD
 		6EC5D41129F0281700288478 /* Michael's Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,15 +123,8 @@
 				6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
-=======
-		FDBF496629F0331200DCE2E0 /* Nelson's Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				FD7E2DE729F18D850051318D /* accountPage.storyboard */,
-			);
-			path = "Nelson's Storyboard";
->>>>>>> 24513d5 (accountPage UI finished)
-=======
+			sourceTree = "<group>";
+		};
 		9746650329F049DE008DF877 /* Ryder's Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +132,14 @@
 				9746650629F04D7B008DF877 /* MapViewController.swift */,
 			);
 			path = "Ryder's Storyboards";
->>>>>>> 9ff527f (home screen commit)
+			sourceTree = "<group>";
+		};
+		FDBF496629F0331200DCE2E0 /* Nelson's Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E2DE729F18D850051318D /* accountPage.storyboard */,
+			);
+			path = "Nelson's Storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,13 +214,8 @@
 				9746650529F04A5A008DF877 /* Home.storyboard in Resources */,
 				6E7C182629ED839900960CA3 /* GoogleService-Info.plist in Resources */,
 				6E7C181B29E858D200960CA3 /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 				FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */,
->>>>>>> 24513d5 (accountPage UI finished)
-=======
->>>>>>> 9ff527f (home screen commit)
+				FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +228,8 @@
 			files = (
 				6EC5D41929F177B500288478 /* SignInViewController.swift in Sources */,
 				6E7C181629E858D100960CA3 /* ViewController.swift in Sources */,
-<<<<<<< HEAD
 				6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */,
-=======
 				9746650729F04D7B008DF877 /* MapViewController.swift in Sources */,
->>>>>>> 9ff527f (home screen commit)
 				6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */,
 				6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */,
 				6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */,
@@ -419,11 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = E5XACFKZ6N;
-=======
 				DEVELOPMENT_TEAM = QZD7BZCHD8;
->>>>>>> 9ff527f (home screen commit)
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,11 +381,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-<<<<<<< HEAD
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-=======
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
->>>>>>> 9ff527f (home screen commit)
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,11 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-<<<<<<< HEAD
-				DEVELOPMENT_TEAM = E5XACFKZ6N;
-=======
 				DEVELOPMENT_TEAM = QZD7BZCHD8;
->>>>>>> 9ff527f (home screen commit)
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -468,11 +410,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-<<<<<<< HEAD
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-=======
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
->>>>>>> 9ff527f (home screen commit)
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
