@@ -82,9 +82,6 @@
 		6E7C181029E858D100960CA3 /* Foot Prints */ = {
 			isa = PBXGroup;
 			children = (
-				6E7C183429ED8D1F00960CA3 /* Views */,
-				6E7C183329ED8CC700960CA3 /* Controllers */,
-				6E7C183229ED8CBC00960CA3 /* Models */,
 				6E7C183029ED8C6D00960CA3 /* Storyboards */,
 				6E7C181129E858D100960CA3 /* AppDelegate.swift */,
 				6E7C181329E858D100960CA3 /* SceneDelegate.swift */,
@@ -107,27 +104,6 @@
 				FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		6E7C183229ED8CBC00960CA3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		6E7C183329ED8CC700960CA3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		6E7C183429ED8D1F00960CA3 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		6EC5D41129F0281700288478 /* Michael's Storyboards */ = {
@@ -397,7 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QZD7BZCHD8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
