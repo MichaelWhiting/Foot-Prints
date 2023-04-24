@@ -23,6 +23,7 @@
 		6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41A29F177D800288478 /* SignUpViewController.swift */; };
 		6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */; };
 		FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */; };
+		FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7E2DE729F18D850051318D /* accountPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6EC5D41A29F177D800288478 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptainRedBeard.swift; path = "Foot Prints/CaptainRedBeard.swift"; sourceTree = SOURCE_ROOT; };
+		FD7E2DE729F18D850051318D /* accountPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accountPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,11 @@
 		6E7C183029ED8C6D00960CA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				6EC5D41129F0281700288478 /* Michael's Storyboards */,
+=======
+				FDBF496629F0331200DCE2E0 /* Nelson's Storyboard */,
+>>>>>>> 24513d5 (accountPage UI finished)
 				FD18F5DD29EEE4BD001B99A5 /* CaptainRedBeard.swift */,
 			);
 			path = Storyboards;
@@ -122,6 +128,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		6EC5D41129F0281700288478 /* Michael's Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +146,14 @@
 				6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
+=======
+		FDBF496629F0331200DCE2E0 /* Nelson's Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FD7E2DE729F18D850051318D /* accountPage.storyboard */,
+			);
+			path = "Nelson's Storyboard";
+>>>>>>> 24513d5 (accountPage UI finished)
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +227,10 @@
 				6E7C181E29E858D200960CA3 /* LaunchScreen.storyboard in Resources */,
 				6E7C182629ED839900960CA3 /* GoogleService-Info.plist in Resources */,
 				6E7C181B29E858D200960CA3 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
+=======
+				FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */,
+>>>>>>> 24513d5 (accountPage UI finished)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 44ACMKKR6R;
+				DEVELOPMENT_TEAM = E5XACFKZ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,12 +395,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "class.Foot-Prints";
+				PRODUCT_BUNDLE_IDENTIFIER = "class.Foot-Prints.nelson";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -396,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 44ACMKKR6R;
+				DEVELOPMENT_TEAM = E5XACFKZ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -404,12 +424,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "class.Foot-Prints";
+				PRODUCT_BUNDLE_IDENTIFIER = "class.Foot-Prints.nelson";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
