@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "1420"
+=======
+   LastUpgradeVersion = "1400"
+>>>>>>> 9ff527f (home screen commit)
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -40,7 +44,12 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+<<<<<<< HEAD
       <MacroExpansion>
+=======
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+>>>>>>> 9ff527f (home screen commit)
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E7C180D29E858D100960CA3"
@@ -48,7 +57,11 @@
             BlueprintName = "Foot Prints"
             ReferencedContainer = "container:Foot Prints.xcodeproj">
          </BuildableReference>
+<<<<<<< HEAD
       </MacroExpansion>
+=======
+      </BuildableProductRunnable>
+>>>>>>> 9ff527f (home screen commit)
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
