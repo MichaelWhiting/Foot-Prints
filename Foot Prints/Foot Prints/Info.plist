@@ -16,11 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-<<<<<<< HEAD
-					<string>accountPage</string>
-=======
 					<string>Home</string>
->>>>>>> 9ff527f (home screen commit)
 				</dict>
 			</array>
 		</dict>
