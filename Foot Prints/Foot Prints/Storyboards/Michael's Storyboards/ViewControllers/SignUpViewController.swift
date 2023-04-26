@@ -37,7 +37,7 @@ extension SignUpViewController {
     // MARK: Functions
     
     func createAccount(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
             if error != nil {
                 print("Error with signing up.")
             } else {
@@ -49,6 +49,23 @@ extension SignUpViewController {
                     
                     usersDocRef.setData(["userID": userUID, "email": email])
                 }
+                
+                self.signIn(email: email, password: password)
+            }
+        }
+    }
+    
+    func completedLogin() {
+        self.view.window?.rootViewController = UIStoryboard(name: "Home", bundle: .main).instantiateViewController(withIdentifier: "TabBarVC")
+    }
+    
+    func signIn(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [self] result, error in
+            if error != nil {
+                print("Error with signing in, perhaps the user does not exist.")
+            } else {
+                print("User has been signed in.")
+                completedLogin()
             }
         }
     }
