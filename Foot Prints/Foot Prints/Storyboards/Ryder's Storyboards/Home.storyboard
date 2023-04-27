@@ -18,20 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pun-mA-fZk">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pun-mA-fZk">
                                 <rect key="frame" x="0.0" y="109" width="390" height="636"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foot Prints" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-Yb-P0o">
-                                <rect key="frame" x="118" y="47" width="155" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foot Prints" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-Yb-P0o">
+                                <rect key="frame" x="117.66666666666669" y="47" width="155" height="50"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="36"/>
                                 <color key="textColor" red="0.26666666666666666" green="0.79607843137254897" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-Hd-w2D">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-Hd-w2D">
                                 <rect key="frame" x="42" y="772" width="307" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="pqf-fk-XAT"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="* Get badge / Create location *">
@@ -41,34 +42,59 @@
                                     <segue destination="iPj-ri-R2J" kind="show" id="pGd-KG-rIr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT8-B3-zcj">
-                                <rect key="frame" x="323" y="55" width="51" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT8-B3-zcj">
+                                <rect key="frame" x="322.66666666666669" y="55" width="51.333333333333314" height="35"/>
                                 <color key="tintColor" red="0.078431375319999996" green="0.21568629149999999" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="line.horizontal.3" catalog="system" subtitle=""/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-Fn-a6K">
+                                <rect key="frame" x="277" y="753" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-K8-Clq">
+                                <rect key="frame" x="284" y="801" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stuff"/>
+                                <connections>
+                                    <action selector="stuff:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uxu-ox-RlL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pun-mA-fZk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0wT-DA-oMj"/>
+                            <constraint firstItem="gIu-Hd-w2D" firstAttribute="top" secondItem="pun-mA-fZk" secondAttribute="bottom" constant="27" id="4wB-T1-6aH"/>
+                            <constraint firstItem="pun-mA-fZk" firstAttribute="top" secondItem="dVd-Yb-P0o" secondAttribute="bottom" constant="12" id="9B7-nB-CIt"/>
                             <constraint firstItem="pun-mA-fZk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BHh-lS-S3D"/>
+                            <constraint firstItem="pun-mA-fZk" firstAttribute="top" secondItem="cT8-B3-zcj" secondAttribute="bottom" constant="19" id="Dur-Co-5Q8"/>
+                            <constraint firstItem="cT8-B3-zcj" firstAttribute="leading" secondItem="dVd-Yb-P0o" secondAttribute="trailing" constant="50.329999999999998" id="TbL-hU-go3"/>
+                            <constraint firstItem="dVd-Yb-P0o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bcc-L8-cud"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pun-mA-fZk" secondAttribute="trailing" id="eSH-dl-woG"/>
+                            <constraint firstItem="gIu-Hd-w2D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="42" id="gKh-cW-KbP"/>
+                            <constraint firstItem="gIu-Hd-w2D" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="jsX-1E-gGm"/>
+                            <constraint firstItem="dVd-Yb-P0o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qae-Ol-GbR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cT8-B3-zcj" secondAttribute="trailing" constant="16" id="vtE-cL-4FA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gIu-Hd-w2D" secondAttribute="trailing" constant="41" id="xdL-UT-nnh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="pun-mA-fZk" id="L6l-3m-e9V"/>
+                        <outlet property="nameTextField" destination="FCr-Fn-a6K" id="BAI-Qf-KfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Badge View Controller-->
         <scene sceneID="PgV-6M-xMt">
             <objects>
-                <viewController id="iPj-ri-R2J" sceneMemberID="viewController">
+                <viewController id="iPj-ri-R2J" customClass="AddBadgeViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rhc-Ka-bIe">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +135,10 @@
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addBadge:" destination="7YD-Ol-Utk" eventType="touchUpInside" id="7AE-zx-rPH"/>
+                                    <action selector="addBadge:" destination="iPj-ri-R2J" eventType="touchUpInside" id="zqH-x9-7lh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add this badge to your collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGS-T3-n1L">
                                 <rect key="frame" x="68" y="439" width="264" height="28"/>
@@ -150,8 +180,12 @@
                         <color key="backgroundColor" red="0.027450980392156862" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="7zu-aE-TGl"/>
+                    <connections>
+                        <outlet property="locationNameTextField" destination="a4f-9k-aQt" id="r6i-2S-cUT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0G-Hu-D9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7YD-Ol-Utk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1050.7692307692307" y="3.5545023696682461"/>
         </scene>
