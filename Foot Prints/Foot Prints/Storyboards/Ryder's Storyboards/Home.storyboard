@@ -82,6 +82,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gIu-Hd-w2D" secondAttribute="trailing" constant="41" id="xdL-UT-nnh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="TuG-nU-X7H"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="pun-mA-fZk" id="L6l-3m-e9V"/>
                         <outlet property="nameTextField" destination="FCr-Fn-a6K" id="BAI-Qf-KfB"/>
@@ -191,6 +193,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">

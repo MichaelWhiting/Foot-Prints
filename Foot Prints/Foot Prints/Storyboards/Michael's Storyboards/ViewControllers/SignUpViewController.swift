@@ -56,7 +56,7 @@ extension SignUpViewController {
     }
     
     func completedLogin() {
-        self.view.window?.rootViewController = UIStoryboard(name: "Home", bundle: .main).instantiateViewController(withIdentifier: "TabBarVC")
+        self.view.window?.rootViewController = UIStoryboard(name: "TabBar", bundle: .main).instantiateViewController(withIdentifier: "TabBarVC")
     }
     
     func signIn(email: String, password: String) {
