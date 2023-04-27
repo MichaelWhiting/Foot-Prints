@@ -24,19 +24,27 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func stuff(_ sender: Any) {
+        
+        let annotation = MKPointAnnotation()
+        annotation.title = nameTextField.text
+        annotation.coordinate = CLLocationCoordinate2D(latitude: currentCoordinate?.latitude ?? 0, longitude: currentCoordinate?.longitude ?? 0)
+        // add any other properties to the annotation if necessary
+        mapView.addAnnotation(annotation)
+        zoomToLatestLocation(with: annotation.coordinate)
+    }
+    
 
     private func configureLocationServices() {
         locationManager.delegate = self
         
-        let status = CLLocationManager.authorizationStatus()
+        let status = CLLocationManager().authorizationStatus
         
         if status == .notDetermined {
             locationManager.requestAlwaysAuthorization()
         } else if status == .authorizedAlways || status == .authorizedWhenInUse {
             beginLocationUpdates(locationManager: locationManager)
         }
-        
-        
     }
     
     private func beginLocationUpdates(locationManager: CLLocationManager) {
@@ -57,13 +65,11 @@ class MapViewController: UIViewController {
         appleParkAnnotation.title = "Apple Park"
         appleParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.332072300, longitude: -122.011138100)
         
-        let ortegaParkAnnotation = MKPointAnnotation()
-        ortegaParkAnnotation.title = "Ortega Park"
-        ortegaParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.342226, longitude: -122.025617)
-        
         mapView.addAnnotation(appleParkAnnotation)
-        mapView.addAnnotation(ortegaParkAnnotation)
     }
+    
+    // temporary stuff below
+    @IBOutlet weak var nameTextField: UITextField!
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -87,32 +93,13 @@ extension MapViewController: CLLocationManagerDelegate {
             beginLocationUpdates(locationManager: manager)
         }
     }
+    
+    
 }
 
 extension MapViewController: MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationView")
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
-        }
-        if let title = annotation.title, title == "Apple Park" {
-            annotationView?.image = UIImage(named: "saucer")
-        } else if let title = annotation.title, title == "Ortega Park" {
-            annotationView?.image = UIImage(named: "tree")
-        } else if annotation === mapView.userLocation {
-            annotationView?.image = UIImage(named: "car")
-        }
-        
-        annotationView?.canShowCallout = true
-        
-        return annotationView
-    }
-    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("The annotation was selected: \(String(describing: view.annotation?.title))")
     }
-    
 }
