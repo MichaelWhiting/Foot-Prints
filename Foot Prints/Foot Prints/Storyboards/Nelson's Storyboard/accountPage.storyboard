@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AccountPage" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountPage" id="Y6W-OH-hqX" customClass="AccountPageViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,36 +36,39 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dmw-Dn-QO5">
                                                     <rect key="frame" x="20" y="-3.3333333333333321" width="353" height="50.333333333333329"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y74-AH-bUX">
-                                                            <rect key="frame" x="0.0" y="1.6666666666666643" width="50" height="47.333333333333336"/>
-                                                            <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK1-nG-a3i">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50.333333333333336"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="RBI-aD-YLx"/>
-                                                                <constraint firstAttribute="height" constant="50" id="WyV-6H-bbX"/>
+                                                                <constraint firstAttribute="width" constant="50" id="FZV-Mt-vzS"/>
+                                                                <constraint firstAttribute="height" constant="50" id="jTh-jR-vfb"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" image="mappin.square.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="locationPageTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AbJ-WE-TA1"/>
+                                                            </connections>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuM-0i-nyS">
                                                             <rect key="frame" x="55" y="0.0" width="243" height="50.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="400" id="x66-oL-mnM"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Hot Springs"/>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-TH-PPK">
-                                                            <rect key="frame" x="303" y="1.6666666666666643" width="50" height="47.333333333333336"/>
-                                                            <color key="tintColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-pO-0lC">
+                                                            <rect key="frame" x="303" y="0.0" width="50" height="50.333333333333336"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="LK3-kw-edl"/>
-                                                                <constraint firstAttribute="width" constant="50" id="sd6-Ui-Cku"/>
+                                                                <constraint firstAttribute="width" constant="50" id="Dye-nH-DkI"/>
+                                                                <constraint firstAttribute="height" constant="50" id="nSI-Wd-FKg"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" image="location.square.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="locationToMap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mzw-uM-Lye"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="Y74-AH-bUX" firstAttribute="centerY" secondItem="dmw-Dn-QO5" secondAttribute="centerY" id="B5r-uv-111"/>
-                                                        <constraint firstItem="wmM-TH-PPK" firstAttribute="centerY" secondItem="dmw-Dn-QO5" secondAttribute="centerY" id="Ujb-jP-ACu"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -113,12 +116,20 @@
                             <constraint firstItem="cBd-8G-sC9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HiV-5W-G4y"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="25Z-NT-9wK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+=======
+                    <connections>
+                        <outlet property="badgesLabel" destination="7Wa-zq-a0E" id="dnJ-Aq-IEv"/>
+                        <outlet property="nameOfLocationLabel" destination="xuM-0i-nyS" id="8x8-p2-w2t"/>
+                        <outlet property="nameOfUser" destination="Ejw-V1-Y22" id="mfL-A3-TyL"/>
+                    </connections>
+>>>>>>> d5a15a9 (account contraints)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="-58"/>
+            <point key="canvasLocation" x="205" y="-23"/>
         </scene>
     </scenes>
     <resources>
