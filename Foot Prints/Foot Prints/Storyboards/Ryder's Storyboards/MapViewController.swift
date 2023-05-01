@@ -24,12 +24,11 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // delete later
     @IBAction func stuff(_ sender: Any) {
-        
         let annotation = MKPointAnnotation()
         annotation.title = nameTextField.text
         annotation.coordinate = CLLocationCoordinate2D(latitude: currentCoordinate?.latitude ?? 0, longitude: currentCoordinate?.longitude ?? 0)
-        // add any other properties to the annotation if necessary
         mapView.addAnnotation(annotation)
         zoomToLatestLocation(with: annotation.coordinate)
     }
@@ -68,7 +67,7 @@ class MapViewController: UIViewController {
         mapView.addAnnotation(appleParkAnnotation)
     }
     
-    // temporary stuff below
+    // temporary outlet
     @IBOutlet weak var nameTextField: UITextField!
 }
 
