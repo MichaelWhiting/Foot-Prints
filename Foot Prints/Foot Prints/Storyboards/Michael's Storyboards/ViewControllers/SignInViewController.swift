@@ -13,10 +13,11 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var isLoading = false
-
+    @IBOutlet weak var loadingIcon: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIcon.isHidden = true
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
@@ -27,7 +28,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBSegueAction func loadingIconSwiftUI(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: CustomLoadCircle(isLoading: isLoading))
+        return UIHostingController(coder: coder, rootView: CustomLoadCircle())
     }
 }
 
@@ -39,8 +40,7 @@ extension SignInViewController {
     }
     
     func signIn(email: String, password: String) {
-        isLoading = true
-        print()
+        loadingIcon.isHidden = false
         Auth.auth().signIn(withEmail: email, password: password) { [self] result, error in
             if error != nil {
                 print("Error with signing in, perhaps the user does not exist.")

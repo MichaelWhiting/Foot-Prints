@@ -161,7 +161,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyq-sL-G6u">
-                                <rect key="frame" x="178" y="446" width="37" height="37"/>
+                                <rect key="frame" x="178" y="446.33333333333331" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="7Co-zc-EUE"/>
                                     <constraint firstAttribute="width" constant="37" id="jB0-mB-eaH"/>
@@ -200,6 +200,7 @@
                     <navigationItem key="navigationItem" id="7dj-5r-fGX"/>
                     <connections>
                         <outlet property="emailTextField" destination="i36-nr-ba6" id="onR-rI-qU0"/>
+                        <outlet property="loadingIcon" destination="nyq-sL-G6u" id="aCW-wT-ggL"/>
                         <outlet property="passwordTextField" destination="29U-v5-fLf" id="hEq-cX-2rW"/>
                     </connections>
                 </viewController>
