@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-=======
-
->>>>>>> 4d1eee5 (added tab bar stuff and yeah)
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nh1-lS-hlU">
                                 <rect key="frame" x="0.0" y="327" width="393" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,10 +78,6 @@
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-8G-sC9">
                                 <rect key="frame" x="112" y="72" width="169" height="221.66666666666663"/>
-<<<<<<< HEAD
-=======
-
->>>>>>> 4d1eee5 (added tab bar stuff and yeah)
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-32-3qh">
                                         <rect key="frame" x="22" y="1" width="125" height="123.66666666666667"/>
@@ -116,16 +108,12 @@
                             <constraint firstItem="cBd-8G-sC9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HiV-5W-G4y"/>
                         </constraints>
                     </view>
-<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="25Z-NT-9wK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-=======
                     <connections>
                         <outlet property="badgesLabel" destination="7Wa-zq-a0E" id="dnJ-Aq-IEv"/>
-                        <outlet property="nameOfLocationLabel" destination="xuM-0i-nyS" id="8x8-p2-w2t"/>
                         <outlet property="nameOfUser" destination="Ejw-V1-Y22" id="mfL-A3-TyL"/>
                     </connections>
->>>>>>> d5a15a9 (account contraints)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
