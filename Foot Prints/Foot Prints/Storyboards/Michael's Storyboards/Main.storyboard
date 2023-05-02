@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,7 +234,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hys-PE-9B2">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -308,6 +308,14 @@
             </objects>
             <point key="canvasLocation" x="1060" y="731"/>
         </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="2GZ-fp-bt4">
+            <objects>
+                <hostingController id="56z-Fk-NrP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiO-4S-ipw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="443"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="C2c-aF-yV5">
             <objects>
@@ -334,7 +342,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-YI-xSC">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="29"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -404,7 +412,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-JD-yXy">
-                                <rect key="frame" x="76.666666666666686" y="570.33333333333337" width="240" height="60"/>
+                                <rect key="frame" x="76.666666666666686" y="577.33333333333337" width="240" height="60"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="J79-XR-kM6"/>
@@ -432,18 +440,29 @@
                                     <action selector="createAccountButtonTapped:" destination="wv3-ga-A5Z" eventType="touchUpInside" id="4lO-Je-Ba1"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-9Y-3Ci">
+                                <rect key="frame" x="178" y="525.33333333333337" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="fdV-qc-KXY"/>
+                                    <constraint firstAttribute="height" constant="37" id="ow3-Jo-JqA"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="56z-Fk-NrP" kind="embed" destinationCreationSelector="swiftUISegue:" id="y65-Yw-u59"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SfX-TQ-f5C"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lQr-N6-mid" firstAttribute="leading" secondItem="uOR-6n-Obb" secondAttribute="leading" constant="20" id="0Ft-8O-pUK"/>
-                            <constraint firstItem="pgB-JD-yXy" firstAttribute="top" secondItem="vYi-wn-scs" secondAttribute="bottom" constant="75" id="7et-ub-1Ta"/>
                             <constraint firstItem="vYi-wn-scs" firstAttribute="top" secondItem="SnM-nd-6lf" secondAttribute="bottom" constant="50" id="8NI-yn-xut"/>
                             <constraint firstItem="SfX-TQ-f5C" firstAttribute="trailing" secondItem="vYi-wn-scs" secondAttribute="trailing" constant="50" id="CVe-e3-keU"/>
                             <constraint firstItem="cYD-Z7-DDW" firstAttribute="leading" secondItem="SfX-TQ-f5C" secondAttribute="leading" constant="20" id="CeP-UQ-acK"/>
                             <constraint firstItem="SfX-TQ-f5C" firstAttribute="trailing" secondItem="Pww-78-Sr9" secondAttribute="trailing" constant="50" id="Gif-PP-A6D"/>
+                            <constraint firstItem="pgB-JD-yXy" firstAttribute="top" secondItem="vPY-9Y-3Ci" secondAttribute="bottom" constant="15" id="HAC-1F-Rfm"/>
                             <constraint firstItem="Pww-78-Sr9" firstAttribute="leading" secondItem="SfX-TQ-f5C" secondAttribute="leading" constant="50" id="LMB-Rq-hQQ"/>
                             <constraint firstItem="SfX-TQ-f5C" firstAttribute="trailing" secondItem="cYD-Z7-DDW" secondAttribute="trailing" constant="20" id="LsJ-FB-MvZ"/>
+                            <constraint firstItem="vPY-9Y-3Ci" firstAttribute="top" secondItem="vYi-wn-scs" secondAttribute="bottom" constant="30" id="MGY-Ff-Sdc"/>
                             <constraint firstItem="SfX-TQ-f5C" firstAttribute="trailing" secondItem="lQr-N6-mid" secondAttribute="trailing" constant="20" id="Rtp-HG-alk"/>
                             <constraint firstItem="Pww-78-Sr9" firstAttribute="top" secondItem="lQr-N6-mid" secondAttribute="bottom" constant="50" id="Tbp-QS-8jh"/>
                             <constraint firstItem="SfX-TQ-f5C" firstAttribute="trailing" secondItem="SnM-nd-6lf" secondAttribute="trailing" constant="50" id="Yts-wX-mHG"/>
@@ -453,18 +472,20 @@
                             <constraint firstItem="vYi-wn-scs" firstAttribute="leading" secondItem="SfX-TQ-f5C" secondAttribute="leading" constant="50" id="rJB-kq-V79"/>
                             <constraint firstItem="SnM-nd-6lf" firstAttribute="top" secondItem="Pww-78-Sr9" secondAttribute="bottom" constant="50" id="rYL-gX-HUY"/>
                             <constraint firstItem="SnM-nd-6lf" firstAttribute="leading" secondItem="SfX-TQ-f5C" secondAttribute="leading" constant="50" id="tG1-Mw-wlR"/>
+                            <constraint firstItem="vPY-9Y-3Ci" firstAttribute="centerX" secondItem="uOR-6n-Obb" secondAttribute="centerX" id="vVz-Ba-MwR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cMC-hP-Uzx"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="qR5-2w-dBN" id="jJx-l9-11T"/>
                         <outlet property="emailTextField" destination="EVo-YI-xSC" id="Y1U-1Z-Rx7"/>
+                        <outlet property="loadingIcon" destination="vPY-9Y-3Ci" id="kk9-q9-2QD"/>
                         <outlet property="passwordTextField" destination="11a-mN-1fU" id="b2T-BF-GjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lym-oD-bu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="4"/>
+            <point key="canvasLocation" x="1843.5114503816794" y="3.5211267605633805"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="fHL-hp-53e">
@@ -472,7 +493,7 @@
                 <hostingController id="7qT-5a-E5L" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcN-QC-BMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="731"/>
+            <point key="canvasLocation" x="135" y="443"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K43-VK-2xL">
