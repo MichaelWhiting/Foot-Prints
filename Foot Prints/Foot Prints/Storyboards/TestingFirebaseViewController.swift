@@ -13,8 +13,6 @@ import FirebaseAuth
 
 class TestingFirebaseViewController: UIViewController {
     
-    var results: [String: Any] = [:]
-
     @IBOutlet weak var dataLabel: UILabel!
     
     var displayString = ""
@@ -57,8 +55,7 @@ class TestingFirebaseViewController: UIViewController {
                 print("There was an error")
             } else {
                 for document in snapshot!.documents {
-                    self.results = document.data()
-                    for result in self.results {
+                    for result in document.data() {
                         self.displayString.append("\(result.key):\(result.value) \n")
                         self.dataLabel.text = self.displayString
                     }

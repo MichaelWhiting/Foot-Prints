@@ -29,7 +29,7 @@ extension ForgotPasswordViewController {
     
     func resetPassword(email: String) {
         print("Reset button tapped")
-//        Auth.auth().sendPasswordReset(withEmail: email)
+        Auth.auth().sendPasswordReset(withEmail: email)
     }
 }
 
