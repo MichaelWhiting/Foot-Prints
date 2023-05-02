@@ -130,7 +130,6 @@
                         <outlet property="LocationsLabel" destination="pAK-gP-Tu2" id="wC9-c6-RZT"/>
                         <outlet property="NumberThisBadgeLabel" destination="QxH-SV-QQ7" id="e9U-RP-arG"/>
                         <outlet property="PeoplecollectedBadgeLabel" destination="VvI-ms-DT9" id="6Ka-Jk-BJd"/>
-                        <outlet property="UsersLabel" destination="OJJ-wT-Cfs" id="Lhp-K9-qsi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjW-L9-jdV" sceneMemberID="firstResponder"/>

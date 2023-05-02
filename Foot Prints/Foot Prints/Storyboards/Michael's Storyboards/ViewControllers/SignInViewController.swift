@@ -22,7 +22,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any) {
         print("sign in button tapped")
-        guard var emailStr = emailTextField.text, let passwordStr = passwordTextField.text else { return }
+        guard let emailStr = emailTextField.text, let passwordStr = passwordTextField.text else { return }
         
         signIn(email: emailStr, password: passwordStr)
     }
