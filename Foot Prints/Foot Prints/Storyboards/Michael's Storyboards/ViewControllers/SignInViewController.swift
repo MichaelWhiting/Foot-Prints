@@ -25,8 +25,8 @@ class SignInViewController: UIViewController {
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
         
 //        Uncomment these if you want to have it auto log in.
-//        emailStr = "email@gmail.com"
-//        passwordStr = "password"
+        emailStr = "michaelbwhiting2004@gmail.com"
+        passwordStr = "jennylyn45"
         
         signIn(email: emailStr, password: passwordStr)
     }
