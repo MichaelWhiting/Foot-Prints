@@ -21,9 +21,8 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        print("sign in button tapped")
-        guard var emailStr = emailTextField.text, let passwordStr = passwordTextField.text else { return }
-        emailStr = "nelson.a.pierce@gmail.com"
+        loadingIcon.isHidden = false
+        guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
         
         signIn(email: emailStr, password: passwordStr)
     }
@@ -41,9 +40,9 @@ extension SignInViewController {
     }
     
     func signIn(email: String, password: String) {
-        loadingIcon.isHidden = false
         Auth.auth().signIn(withEmail: email, password: password) { [self] result, error in
             if error != nil {
+                loadingIcon.isHidden = true
                 print("Error with signing in, perhaps the user does not exist.")
             } else {
                 print("User has been signed in.")

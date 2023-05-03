@@ -15,6 +15,9 @@
 		6E3917B72A001C7200F52BC6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B62A001C7200F52BC6 /* FirebaseDatabase */; };
 		6E3917B92A001C7200F52BC6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B82A001C7200F52BC6 /* FirebaseFirestore */; };
 		6E3917BB2A001C7200F52BC6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917BA2A001C7200F52BC6 /* FirebaseFirestoreSwift */; };
+
+		6E3917C12A02A21200F52BC6 /* TabBarModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */; };
+
 		6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181129E858D100960CA3 /* AppDelegate.swift */; };
 		6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181329E858D100960CA3 /* SceneDelegate.swift */; };
 		6E7C181629E858D100960CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181529E858D100960CA3 /* ViewController.swift */; };
@@ -43,6 +46,7 @@
 		3146CBE62A0010C800E85716 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		31EB44F529F96E2B0026C204 /* Badge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Badge.storyboard; sourceTree = "<group>"; };
 		6E00ADB729F97DA00053C716 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModifications.swift; sourceTree = "<group>"; };
 		6E7C180E29E858D100960CA3 /* Foot Prints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foot Prints.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7C181129E858D100960CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7C181329E858D100960CA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				6EC5D41A29F177D800288478 /* SignUpViewController.swift */,
 				6EC5D41C29F177F400288478 /* ForgotPasswordViewController.swift */,
 				6ED1C89929FFF97000962DBD /* LoadingCircle.swift */,
+				6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */,
 				6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */,
 				FDF137782A000E1C00AC7B7E /* AccountPageViewController.swift in Sources */,
+				6E3917C12A02A21200F52BC6 /* TabBarModifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

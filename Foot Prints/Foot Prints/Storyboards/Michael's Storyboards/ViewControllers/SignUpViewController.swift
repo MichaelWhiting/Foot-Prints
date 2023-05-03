@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import FirebaseAuth
 import Firebase
 
@@ -15,19 +16,29 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    @IBOutlet weak var loadingIcon: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIcon.isHidden = true
     }
     
     
+    @IBSegueAction func swiftUISegue(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: CustomLoadCircle())
+    }
+    
     @IBAction func createAccountButtonTapped(_ sender: Any) {
-        print("Create account button tapped")
+        loadingIcon.isHidden = false
         guard let emailStr = emailTextField.text,
               let passwordStr = passwordTextField.text,
               let confirmPasswordStr = confirmPasswordTextField.text
         else { return }
         
-        guard passwordStr == confirmPasswordStr else { return }
+        if passwordStr != confirmPasswordStr {
+            loadingIcon.isHidden = true
+            return
+        }
         
         createAccount(email: emailStr, password: passwordStr)
     }
@@ -39,6 +50,7 @@ extension SignUpViewController {
     func createAccount(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
             if error != nil {
+                loadingIcon.isHidden = true
                 print("Error with signing up.")
             } else {
                 print("User has been signed up")
@@ -62,6 +74,7 @@ extension SignUpViewController {
     func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [self] result, error in
             if error != nil {
+                loadingIcon.isHidden = true
                 print("Error with signing in, perhaps the user does not exist.")
             } else {
                 print("User has been signed in.")
