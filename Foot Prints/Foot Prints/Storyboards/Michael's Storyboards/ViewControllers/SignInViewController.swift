@@ -24,10 +24,6 @@ class SignInViewController: UIViewController {
         loadingIcon.isHidden = false
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
         
-//        Uncomment these if you want to have it auto log in.
-        emailStr = "michaelbwhiting2004@gmail.com"
-        passwordStr = "jennylyn45"
-        
         signIn(email: emailStr, password: passwordStr)
     }
     
