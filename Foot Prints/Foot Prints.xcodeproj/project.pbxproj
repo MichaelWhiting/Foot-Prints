@@ -15,9 +15,7 @@
 		6E3917B72A001C7200F52BC6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B62A001C7200F52BC6 /* FirebaseDatabase */; };
 		6E3917B92A001C7200F52BC6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B82A001C7200F52BC6 /* FirebaseFirestore */; };
 		6E3917BB2A001C7200F52BC6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917BA2A001C7200F52BC6 /* FirebaseFirestoreSwift */; };
-
 		6E3917C12A02A21200F52BC6 /* TabBarModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */; };
-
 		6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181129E858D100960CA3 /* AppDelegate.swift */; };
 		6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181329E858D100960CA3 /* SceneDelegate.swift */; };
 		6E7C181629E858D100960CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181529E858D100960CA3 /* ViewController.swift */; };
@@ -40,6 +38,7 @@
 		FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7E2DE729F18D850051318D /* accountPage.storyboard */; };
 		FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */; };
 		FDF137782A000E1C00AC7B7E /* AccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */; };
+		FDF1377A2A02B9FC00AC7B7E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF137792A02B9FC00AC7B7E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +70,7 @@
 		FD7E2DE729F18D850051318D /* accountPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accountPage.storyboard; sourceTree = "<group>"; };
 		FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 		FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewController.swift; sourceTree = "<group>"; };
+		FDF137792A02B9FC00AC7B7E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +183,7 @@
 				FD7E2DE729F18D850051318D /* accountPage.storyboard */,
 				FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */,
 				FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */,
+				FDF137792A02B9FC00AC7B7E /* SettingsViewController.swift */,
 			);
 			path = "Nelson's Storyboard";
 			sourceTree = "<group>";
@@ -288,6 +289,7 @@
 				973DF9772A00199000A35E47 /* AddOrCreateBadgeViewController.swift in Sources */,
 				FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */,
 				6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */,
+				FDF1377A2A02B9FC00AC7B7E /* SettingsViewController.swift in Sources */,
 				FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */,
 				6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */,
 				FDF137782A000E1C00AC7B7E /* AccountPageViewController.swift in Sources */,
