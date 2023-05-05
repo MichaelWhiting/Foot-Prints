@@ -7,7 +7,11 @@
 
 import UIKit
 import SwiftUI
+
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+import Firebase
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,6 +27,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInButtonTapped(_ sender: Any) {
         loadingIcon.isHidden = false
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
+        emailStr = "nelson.a.pierce@gmail.com"
         
         signIn(email: emailStr, password: passwordStr)
     }

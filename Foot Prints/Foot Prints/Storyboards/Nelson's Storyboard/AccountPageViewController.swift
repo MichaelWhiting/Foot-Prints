@@ -67,4 +67,54 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         }
        
     }
+    
+//    @objc func buttonTapped() {
+//        let vc = UIViewController()
+//        vc.view.backgroundColor = .white
+//        vc.modalPresentationStyle = .custom
+//        vc.transitioningDelegate = self
+//        present(vc, animated: true, completion: nil)
+//    }
+//
+//    extension SettingsViewController: UIViewControllerTransitioningDelegate {
+//        func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UISheetPresentationController? {
+//            let customHeight = 400
+//            return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, height: customHeight)
+//        }
+//    }  present(nav, animated: true, completion: nil)
+
+    
+    private func presentModal() {
+        let settingsViewController = SettingsViewController()
+        let nav = UINavigationController(rootViewController: settingsViewController)
+        // 1
+        nav.modalPresentationStyle = .pageSheet
+
+        
+        // 2
+        if let sheet = nav.sheetPresentationController {
+
+            // 3
+            sheet.detents = [.medium(), .large()]
+
+        }
+        // 4
+        present(nav, animated: true, completion: nil)
+
+    }
+    
+    
+    
+    
+    @IBAction func settingsPage(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "SettingsViewController", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
+
+                if let presentationController = viewController.presentationController as? UISheetPresentationController {
+                    presentationController.detents = [.medium()] 
+                }
+
+                self.present(viewController, animated: true)
+            }
 }

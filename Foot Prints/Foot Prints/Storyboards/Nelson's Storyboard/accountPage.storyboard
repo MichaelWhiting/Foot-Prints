@@ -128,8 +128,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bfy-Le-JgI">
-                        <barButtonItem key="rightBarButtonItem" image="gear.circle.fill" catalog="system" id="2f6-Qn-XTg">
+                        <barButtonItem key="rightBarButtonItem" title="settingsModal" image="gear.circle.fill" catalog="system" id="2f6-Qn-XTg">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="settingsPage:" destination="Y6W-OH-hqX" id="4wX-dt-APW"/>
+                                <segue destination="fGf-o5-8tc" kind="presentation" identifier="" modalPresentationStyle="pageSheet" id="LIX-ah-gGB"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -140,7 +144,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="-27"/>
+            <point key="canvasLocation" x="1109" y="13"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="tHE-zR-9QI">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" autoresizesArchivedViewToFullSize="NO" title="SettingsViewController" automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" modalPresentationStyle="pageSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGf-o5-8tc" customClass="SettingsViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kb-Df-wKM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-kG-j2I">
+                                <rect key="frame" x="16.333333333333343" y="404" width="360.33333333333326" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy8-fQ-o9R">
+                                        <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Change Password"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLp-Jv-b0R">
+                                        <rect key="frame" x="199.66666666666669" y="0.0" width="160.66666666666669" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k58-yQ-J2s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerX" secondItem="9kb-Df-wKM" secondAttribute="centerX" id="IPs-fd-bEv"/>
+                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerX" secondItem="9kb-Df-wKM" secondAttribute="centerX" id="RDQ-zm-tTh"/>
+                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerY" secondItem="9kb-Df-wKM" secondAttribute="centerY" id="STE-V4-L2m"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="393" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofq-Vr-9Km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8i-u8-9C5">

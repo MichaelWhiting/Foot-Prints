@@ -7,23 +7,38 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+import Firebase
+
+class SettingsViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presentModal()
 
-        // Do any additional setup after loading the view.
     }
     
+    private func presentModal() {
+        let settingsViewController = SettingsViewController()
+        let nav = UINavigationController(rootViewController: settingsViewController)
+        // 1
+        nav.modalPresentationStyle = .pageSheet
 
-    /*
-    // MARK: - Navigation
+        
+        // 2
+        if let sheet = nav.sheetPresentationController {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            // 3
+            sheet.detents = [.medium()]
+
+        }
+        // 4
+        present(nav, animated: true, completion: nil)
+
     }
-    */
-
-}
+        
+    }
+    
+    
