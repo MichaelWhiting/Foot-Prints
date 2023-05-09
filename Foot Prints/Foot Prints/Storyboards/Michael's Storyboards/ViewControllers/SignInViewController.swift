@@ -21,9 +21,16 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
+<<<<<<< HEAD
         loadingIcon.isHidden = false
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
         
+=======
+        print("sign in button tapped")
+        guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
+        emailStr = "ryder.claybaugh@gmail.com"
+        passwordStr = "Wreckage123"
+>>>>>>> 9103a45 (custom pins working mostly)
         signIn(email: emailStr, password: passwordStr)
     }
     
