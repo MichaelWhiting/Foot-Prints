@@ -48,9 +48,6 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view delegate methods
     @IBAction func RatingSlider(_ sender: UISlider) {
     }
-    @IBAction func AddThisBadgeButton(_ sender: UIButton) {
-        
-    }
     
     // Implement any necessary table view delegate methods here
     
