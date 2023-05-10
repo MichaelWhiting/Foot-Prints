@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="1109" y="13"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="5H2-Eu-fSt">
             <objects>
-                <viewController id="yXh-AW-IYW" sceneMemberID="viewController">
+                <viewController id="yXh-AW-IYW" customClass="SettingsViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KK-YW-VpR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,15 +168,21 @@
                                 <buttonConfiguration key="configuration" style="filled" title="CHANGE PASSWORD">
                                     <color key="baseBackgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="changePassword:" destination="CFS-tV-6ob" eventType="touchUpInside" id="f0K-um-nzH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-bU-P9Y">
-                                <rect key="frame" x="102" y="438" width="189.66666666666674" height="34.333333333333314"/>
+                                <rect key="frame" x="102" y="438" width="189.66666666666674" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LOG OUT">
+                                <buttonConfiguration key="configuration" style="filled" title="SIGN OUT">
                                     <color key="baseBackgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOut:" destination="CFS-tV-6ob" eventType="touchUpInside" id="38f-oc-URd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zrz-X1-0sL"/>
@@ -185,6 +191,7 @@
                     <navigationItem key="navigationItem" id="umy-SV-t5X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHj-rL-des" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CFS-tV-6ob" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1997.709923664122" y="63.380281690140848"/>
         </scene>

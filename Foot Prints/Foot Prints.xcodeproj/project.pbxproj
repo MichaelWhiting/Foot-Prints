@@ -39,6 +39,7 @@
 		FD7E2DE829F18D850051318D /* accountPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7E2DE729F18D850051318D /* accountPage.storyboard */; };
 		FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */; };
 		FDEB3A942A056102001E5715 /* SettingsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */; };
+		FDEB3A962A0BE58D001E5715 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */; };
 		FDF137782A000E1C00AC7B7E /* AccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		FD7E2DE729F18D850051318D /* accountPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accountPage.storyboard; sourceTree = "<group>"; };
 		FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 		FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresentationController.swift; sourceTree = "<group>"; };
+		FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */,
 				FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */,
 				FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */,
+				FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */,
 			);
 			path = "Nelson's Storyboard";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				6ED1C89A29FFF97000962DBD /* LoadingCircle.swift in Sources */,
 				6EC5D41B29F177D800288478 /* SignUpViewController.swift in Sources */,
 				6ED1C89C2A00008E00962DBD /* TestingFirebaseViewController.swift in Sources */,
+				FDEB3A962A0BE58D001E5715 /* SettingsViewController.swift in Sources */,
 				9746650729F04D7B008DF877 /* MapViewController.swift in Sources */,
 				6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */,
 				3146CBE72A0010C800E85716 /* LocationViewController.swift in Sources */,
