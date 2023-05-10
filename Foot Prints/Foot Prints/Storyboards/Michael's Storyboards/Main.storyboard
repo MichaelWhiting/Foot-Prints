@@ -162,6 +162,7 @@
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyq-sL-G6u">
                                 <rect key="frame" x="178" y="446.33333333333331" width="37" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="7Co-zc-EUE"/>
                                     <constraint firstAttribute="width" constant="37" id="jB0-mB-eaH"/>
@@ -442,6 +443,7 @@
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-9Y-3Ci">
                                 <rect key="frame" x="178" y="525.33333333333337" width="37" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="fdV-qc-KXY"/>
                                     <constraint firstAttribute="height" constant="37" id="ow3-Jo-JqA"/>
@@ -498,7 +500,7 @@
         <!--Navigation Controller-->
         <scene sceneID="K43-VK-2xL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0IC-3M-PaV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StartUpScreen" automaticallyAdjustsScrollViewInsets="NO" id="0IC-3M-PaV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="23m-wJ-I30">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
