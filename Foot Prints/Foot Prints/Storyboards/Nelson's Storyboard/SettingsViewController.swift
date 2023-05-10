@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
@@ -16,14 +17,17 @@ class SettingsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func changePassword(_ sender: UIButton) {
+        
     }
-    */
-
+    
+    @IBAction func signOut(_ sender: UIButton) {
+       try? Auth.auth().signOut()
+        completedLogin()
+    }
+    
+    func completedLogin() {
+         self.view.window?.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "StartUpScreen")
+     }
+    
 }
