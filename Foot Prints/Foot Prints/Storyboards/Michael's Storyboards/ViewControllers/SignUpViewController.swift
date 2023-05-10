@@ -20,6 +20,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
         loadingIcon.isHidden = true
     }
     
@@ -41,6 +44,13 @@ class SignUpViewController: UIViewController {
         }
         
         createAccount(email: emailStr, password: passwordStr)
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 
