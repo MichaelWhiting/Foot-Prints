@@ -21,6 +21,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nh1-lS-hlU">
                                 <rect key="frame" x="0.0" y="372.66666666666674" width="393" height="479.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BadgeCell" id="eqo-Rz-HIv" customClass="BadgeTableViewCell" customModule="Foot_Prints" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="70.333335876464844"/>
@@ -84,6 +85,7 @@
                                                 <constraint firstItem="dmw-Dn-QO5" firstAttribute="top" secondItem="eKp-eY-xOZ" secondAttribute="top" constant="10" id="lIz-Pb-xYb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.93638392859999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="nameOfBadge" destination="pns-lI-KS6" id="ljZ-4S-nK5"/>
                                         </connections>
@@ -132,7 +134,7 @@
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="settingsPage:" destination="Y6W-OH-hqX" id="4wX-dt-APW"/>
-                                <segue destination="fGf-o5-8tc" kind="presentation" identifier="" modalPresentationStyle="pageSheet" id="LIX-ah-gGB"/>
+                                <segue destination="yXh-AW-IYW" kind="show" id="JpY-MI-ddp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -146,44 +148,45 @@
             </objects>
             <point key="canvasLocation" x="1109" y="13"/>
         </scene>
-        <!--SettingsViewController-->
-        <scene sceneID="tHE-zR-9QI">
+        <!--View Controller-->
+        <scene sceneID="5H2-Eu-fSt">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" autoresizesArchivedViewToFullSize="NO" title="SettingsViewController" automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" modalPresentationStyle="pageSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGf-o5-8tc" customClass="SettingsViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9kb-Df-wKM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                <viewController id="yXh-AW-IYW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2KK-YW-VpR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-kG-j2I">
-                                <rect key="frame" x="16.333333333333343" y="404" width="360.33333333333326" height="34.333333333333314"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy8-fQ-o9R">
-                                        <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Change Password"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLp-Jv-b0R">
-                                        <rect key="frame" x="199.66666666666669" y="0.0" width="160.66666666666669" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo1" translatesAutoresizingMaskIntoConstraints="NO" id="ENy-40-3qo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-n2-b5k">
+                                <rect key="frame" x="102" y="380" width="190" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CHANGE PASSWORD">
+                                    <color key="baseBackgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-bU-P9Y">
+                                <rect key="frame" x="102" y="438" width="189.66666666666674" height="34.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOG OUT">
+                                    <color key="baseBackgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="k58-yQ-J2s"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerX" secondItem="9kb-Df-wKM" secondAttribute="centerX" id="IPs-fd-bEv"/>
-                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerX" secondItem="9kb-Df-wKM" secondAttribute="centerX" id="RDQ-zm-tTh"/>
-                            <constraint firstItem="kgg-kG-j2I" firstAttribute="centerY" secondItem="9kb-Df-wKM" secondAttribute="centerY" id="STE-V4-L2m"/>
-                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zrz-X1-0sL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="393" height="500"/>
+                    <navigationItem key="navigationItem" id="umy-SV-t5X"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ofq-Vr-9Km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHj-rL-des" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="63"/>
+            <point key="canvasLocation" x="1997.709923664122" y="63.380281690140848"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8i-u8-9C5">
@@ -211,6 +214,7 @@
         <image name="mappin.square.fill" catalog="system" width="128" height="114"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="photo1" width="799" height="554"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

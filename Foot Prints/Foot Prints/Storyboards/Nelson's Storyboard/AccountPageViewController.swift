@@ -12,6 +12,10 @@ import FirebaseCore
 import Firebase
 import FirebaseAuth
 
+
+
+
+
 class AccountPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -84,24 +88,24 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
 //    }  present(nav, animated: true, completion: nil)
 
     
-    private func presentModal() {
-        let settingsViewController = SettingsViewController()
-        let nav = UINavigationController(rootViewController: settingsViewController)
-        // 1
-        nav.modalPresentationStyle = .pageSheet
-
-        
-        // 2
-        if let sheet = nav.sheetPresentationController {
-
-            // 3
-            sheet.detents = [.medium(), .large()]
-
-        }
-        // 4
-        present(nav, animated: true, completion: nil)
-
-    }
+//    private func presentModal() {
+//        let settingsViewController = SettingsViewController()
+//        let nav = UINavigationController(rootViewController: settingsViewController)
+//        // 1
+//        nav.modalPresentationStyle = .pageSheet
+//
+//
+//        // 2
+//        if let sheet = nav.sheetPresentationController {
+//
+//            // 3
+//            sheet.detents = [.medium(), .large()]
+//
+//        }
+//        // 4
+//        present(nav, animated: true, completion: nil)
+//
+//    }
     
     
     
