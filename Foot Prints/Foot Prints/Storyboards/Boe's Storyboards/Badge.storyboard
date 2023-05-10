@@ -13,7 +13,7 @@
         <!--Location View Controller-->
         <scene sceneID="NfH-er-xnk">
             <objects>
-                <viewController id="kOC-8k-P5A" customClass="LocationViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BadgeVC" id="kOC-8k-P5A" customClass="LocationViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6r-3K-nF6">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6TK-zZ-QZ4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xD7-mT-3rN" firstAttribute="top" secondItem="Vwf-53-lqT" secondAttribute="bottom" constant="35" id="8tE-Wn-ieJ"/>
                             <constraint firstAttribute="bottom" secondItem="I9l-Lc-0wc" secondAttribute="bottom" constant="205" id="99d-yx-WiT"/>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="499.53488372093022" y="5.7939914163090132"/>
         </scene>
-        <!--Location Presention View Controller-->
+        <!--Location Presentation View Controller-->
         <scene sceneID="At7-Mz-BHt">
             <objects>
-                <viewController storyboardIdentifier="LocationPresentionViewController" id="6qN-mV-7H1" customClass="LocationPresentionViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationPresentionViewController" id="6qN-mV-7H1" customClass="LocationPresentationViewController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkU-97-Ije">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +169,7 @@
                                     <color key="baseBackgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="AddThisBadgeButton:" destination="kOC-8k-P5A" eventType="touchUpInside" id="Q1P-lp-hsj"/>
+                                    <action selector="NextButtonPressed:" destination="6qN-mV-7H1" eventType="touchUpInside" id="bRg-K2-5GU"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-dL-bES">
@@ -199,7 +199,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DYa-XT-odr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FUP-PN-lLw" firstAttribute="centerX" secondItem="y8Q-dL-bES" secondAttribute="centerX" id="5iV-QW-Sf7"/>
                             <constraint firstItem="FUP-PN-lLw" firstAttribute="top" secondItem="BPT-sW-BSH" secondAttribute="bottom" constant="8" id="DYh-l6-HTT"/>
@@ -215,6 +215,9 @@
                             <constraint firstItem="y8Q-dL-bES" firstAttribute="leading" secondItem="DYa-XT-odr" secondAttribute="leading" constant="10" id="zad-Tr-Dgy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="ZI9-CS-Iys" id="EaU-1p-GkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2F-2n-bYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

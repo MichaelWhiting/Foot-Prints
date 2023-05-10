@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3146CBE72A0010C800E85716 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3146CBE62A0010C800E85716 /* LocationViewController.swift */; };
+
 		31E060F92A04047500DB1AAC /* LocationPresentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E060F82A04047500DB1AAC /* LocationPresentionViewController.swift */; };
 		31EB44F629F96E2B0026C204 /* Badge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EB44F529F96E2B0026C204 /* Badge.storyboard */; };
 		6E00ADB829F97DA00053C716 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E00ADB729F97DA00053C716 /* TabBar.storyboard */; };
@@ -15,8 +16,11 @@
 		6E3917B52A001C7200F52BC6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B42A001C7200F52BC6 /* FirebaseAuth */; };
 		6E3917B72A001C7200F52BC6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B62A001C7200F52BC6 /* FirebaseDatabase */; };
 		6E3917B92A001C7200F52BC6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B82A001C7200F52BC6 /* FirebaseFirestore */; };
-		6E3917BB2A001C7200F52BC6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917BA2A001C7200F52BC6 /* FirebaseFirestoreSwift */; };
+		6E3917BB2A001C7200F52BC6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917BA2A001C7200F52BC6 /*
+		6E3917C12A02A21200F52BC6 /* TabBarModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3917C02A02A21200F52BC6 /*
+
 		6E3917C12A02A21200F52BC6 /* TabBarModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */; };
+
 		6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181129E858D100960CA3 /* AppDelegate.swift */; };
 		6E7C181429E858D100960CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181329E858D100960CA3 /* SceneDelegate.swift */; };
 		6E7C181629E858D100960CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C181529E858D100960CA3 /* ViewController.swift */; };
