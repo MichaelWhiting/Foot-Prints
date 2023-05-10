@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3146CBE72A0010C800E85716 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3146CBE62A0010C800E85716 /* LocationViewController.swift */; };
+		31E060F92A04047500DB1AAC /* LocationPresentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E060F82A04047500DB1AAC /* LocationPresentionViewController.swift */; };
 		31EB44F629F96E2B0026C204 /* Badge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EB44F529F96E2B0026C204 /* Badge.storyboard */; };
 		6E00ADB829F97DA00053C716 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E00ADB729F97DA00053C716 /* TabBar.storyboard */; };
 		6E3917B32A001C7200F52BC6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3917B22A001C7200F52BC6 /* FirebaseAnalytics */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		3146CBE62A0010C800E85716 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		31E060F82A04047500DB1AAC /* LocationPresentionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresentionViewController.swift; sourceTree = "<group>"; };
 		31EB44F529F96E2B0026C204 /* Badge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Badge.storyboard; sourceTree = "<group>"; };
 		6E00ADB729F97DA00053C716 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		6E3917C02A02A21200F52BC6 /* TabBarModifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModifications.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				31EB44F529F96E2B0026C204 /* Badge.storyboard */,
 				3146CBE62A0010C800E85716 /* LocationViewController.swift */,
+				31E060F82A04047500DB1AAC /* LocationPresentionViewController.swift */,
 			);
 			path = "Boe's Storyboards";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				6E7C181229E858D100960CA3 /* AppDelegate.swift in Sources */,
 				3146CBE72A0010C800E85716 /* LocationViewController.swift in Sources */,
 				FDEB3A942A056102001E5715 /* SettingsPresentationController.swift in Sources */,
+				31E060F92A04047500DB1AAC /* LocationPresentionViewController.swift in Sources */,
 				6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */,
 				973DF9772A00199000A35E47 /* AddOrCreateBadgeViewController.swift in Sources */,
 				FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */,

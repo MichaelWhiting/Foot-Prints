@@ -14,26 +14,52 @@ import Firebase
 import CoreLocation
 import MapKit
 
-class AddOrCreateBadgeViewController: UIViewController {
+class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegate {
 
-    private let locationManager = CLLocationManager()
-    private var currentCoordinate: CLLocationCoordinate2D?
+    var locationManager: CLLocationManager!
     
     @IBOutlet weak var locationNameTextField: UITextField!
     @IBOutlet weak var ratingSlider: UISlider!
     
+    var latitude = ""
+    var longitude = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        DispatchQueue.global().async {
+              if CLLocationManager.locationServicesEnabled() {
+                  self.locationManager.startUpdatingLocation()
+              }
+        }
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation: CLLocation = locations[0] as CLLocation
+        
+        print("latitude = \(userLocation.coordinate.latitude)")
+        print("longitude = \(userLocation.coordinate.longitude)")
+        
+        longitude = "\(userLocation.coordinate.longitude)"
+        latitude = "\(userLocation.coordinate.latitude)"
+}
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error \(error)")
+}
+    
     @IBAction func addBadgePressed(_ sender: Any) {
-        let annotation = MKPointAnnotation()
-        annotation.title = locationNameTextField.text
-        annotation.coordinate = CLLocationCoordinate2D( latitude: currentCoordinate?.latitude ?? 0, longitude: currentCoordinate?.longitude ?? 0)
-//         mapView.addAnnotation(annotation)
+        let db = Firestore.firestore()
+        let ref = db.collection("Locations")
+        ref.addDocument(data: ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1])
+        
+        print("latitude: \(latitude), longitude: \(longitude)")
+        
     }
     
 

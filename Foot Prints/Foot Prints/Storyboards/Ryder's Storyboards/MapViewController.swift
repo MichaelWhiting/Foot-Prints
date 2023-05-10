@@ -8,32 +8,88 @@
 import UIKit
 import MapKit
 
+import FirebaseDatabase
+import FirebaseCore
+import Firebase
+import FirebaseAuth
+
+struct Location {
+    let name: String
+    let latitude: String
+    let longitude: String
+    let sliderRating: Double
+}
+
 class MapViewController: UIViewController {
     
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
+    var locations: [Location] = []
+    var annotations = [MKPointAnnotation]()
     
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         mapView.delegate = self
-        
         configureLocationServices()
-        // Do any additional setup after loading the view.
-    }
-
-    // delete later
-    @IBAction func stuff(_ sender: Any) {
-        let annotation = MKPointAnnotation()
-        annotation.title = nameTextField.text
-        annotation.coordinate = CLLocationCoordinate2D(latitude: currentCoordinate?.latitude ?? 0, longitude: currentCoordinate?.longitude ?? 0)
-        mapView.addAnnotation(annotation)
-        zoomToLatestLocation(with: annotation.coordinate)
+        readLocations()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.loadLocations()
+        }
     }
     
-
+    func readLocations() {
+        let db = Firestore.firestore()
+        
+        let readingRef = db.collection("Locations")
+        readingRef.getDocuments { snapshot, error in
+            if let error {
+                print("There was an error reading from document: Locations")
+            } else {
+                for document in snapshot!.documents {
+                    let data = document.data()
+                    let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0)
+                    print("read . . . \(newLocation)")
+                    self.locations.append(newLocation)
+                }
+            }
+        }
+        print("read locations")
+    }
+    
+    func loadLocations() {
+        for location in locations {
+            print("loading . . . \(location)")
+            let annotation = MKPointAnnotation()
+            annotation.title = location.name
+            annotation.coordinate = CLLocationCoordinate2D(latitude: Double(location.latitude)!, longitude: Double(location.longitude)!)
+            annotations.append(annotation)
+            mapView.addAnnotation(annotation)
+        }
+        print("annotations added")
+    }
+    
+    @IBAction func read(_ sender: Any) {
+        readLocations()
+    }
+    
+    @IBAction func load(_ sender: Any) {
+        loadLocations()
+    }
+    
+    @IBOutlet weak var latitude: UITextField!
+    @IBOutlet weak var longitude: UITextField!
+    @IBOutlet weak var name: UITextField!
+    
+    @IBAction func add(_ sender: Any) {
+        let annotation = MKPointAnnotation()
+        annotation.title = name.text
+        annotation.coordinate = CLLocationCoordinate2D(latitude: Double(latitude.text!)!, longitude: Double(longitude.text!)!)
+        mapView.addAnnotation(annotation)
+    }
+    
+    
     private func configureLocationServices() {
         locationManager.delegate = self
         
@@ -44,7 +100,7 @@ class MapViewController: UIViewController {
         } else if status == .authorizedAlways || status == .authorizedWhenInUse {
             beginLocationUpdates(locationManager: locationManager)
         }
-    }
+}
     
     private func beginLocationUpdates(locationManager: CLLocationManager) {
         mapView.showsUserLocation = true
@@ -59,16 +115,6 @@ class MapViewController: UIViewController {
         mapView.setRegion(zoomRegion, animated: true)
     }
     
-    private func addAnnotations() {
-        let appleParkAnnotation = MKPointAnnotation()
-        appleParkAnnotation.title = "Apple Park"
-        appleParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.332072300, longitude: -122.011138100)
-        
-        mapView.addAnnotation(appleParkAnnotation)
-    }
-    
-    // temporary outlet
-    @IBOutlet weak var nameTextField: UITextField!
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -80,7 +126,6 @@ extension MapViewController: CLLocationManagerDelegate {
         
         if currentCoordinate == nil {
             zoomToLatestLocation(with: latestLocation.coordinate)
-            addAnnotations()
         }
         
         currentCoordinate = latestLocation.coordinate
@@ -96,6 +141,7 @@ extension MapViewController: CLLocationManagerDelegate {
     
 }
 
+// later add segue to new view using the annotation was selected
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
