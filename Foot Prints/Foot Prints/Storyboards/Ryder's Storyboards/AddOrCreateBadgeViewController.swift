@@ -63,6 +63,7 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         print("latitude: \(latitude), longitude: \(longitude)")
     }
 }
+
 extension AddOrCreateBadgeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
