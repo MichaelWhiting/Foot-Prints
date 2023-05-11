@@ -13,9 +13,6 @@ import Firebase
 import FirebaseAuth
 
 
-
-
-
 class AccountPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -31,6 +28,7 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         badgeTableView.delegate = self
         badgeTableView.dataSource = self
         getUserData()
+        getUserEmail()
         
 //        locationPage.imageView?.contentMode = .scaleAspectFit
 //        locationPage.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -49,6 +47,10 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         cell.nameOfBadge.text! = name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func getUserData() {
@@ -70,6 +72,23 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
             self.badgeTableView.reloadData()
         }
        
+    }
+    
+    func getUserEmail() {
+        let db = Firestore.firestore()
+        
+        if let userID = Auth.auth().currentUser?.uid{
+            let usersReference = db.collection("Users").document(userID)
+            usersReference.getDocument { document, error in
+                if let error{
+                    print(error.localizedDescription)
+                } else {
+                    let data = document!.data()
+                    let email = data?["email"] as? String
+                    self.nameOfUser.text = email ?? ""
+                }
+            }
+        }
     }
     
 //    @objc func buttonTapped() {
