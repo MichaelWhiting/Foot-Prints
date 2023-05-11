@@ -15,7 +15,7 @@ import CoreLocation
 import MapKit
 
 class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     var locationManager: CLLocationManager!
     
     @IBOutlet weak var locationNameTextField: UITextField!
@@ -26,7 +26,7 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.locationNameTextField.delegate = self
         
         locationManager = CLLocationManager()
@@ -35,9 +35,9 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         locationManager.requestAlwaysAuthorization()
         
         DispatchQueue.global().async {
-              if CLLocationManager.locationServicesEnabled() {
-                  self.locationManager.startUpdatingLocation()
-              }
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager.startUpdatingLocation()
+            }
         }
     }
     
@@ -49,11 +49,11 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         
         longitude = "\(userLocation.coordinate.longitude)"
         latitude = "\(userLocation.coordinate.latitude)"
-}
+    }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error \(error)")
-}
+    }
     
     @IBAction func addBadgePressed(_ sender: Any) {
         let db = Firestore.firestore()
@@ -62,7 +62,8 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         
         print("latitude: \(latitude), longitude: \(longitude)")
     }
-
+}
+    
 extension AddOrCreateBadgeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

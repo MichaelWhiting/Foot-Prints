@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pun-mA-fZk">
-                                <rect key="frame" x="0.0" y="109" width="390" height="627"/>
+                                <rect key="frame" x="0.0" y="109" width="390" height="652"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foot Prints" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-Yb-P0o">
@@ -37,13 +37,14 @@
                             <constraint firstItem="dVd-Yb-P0o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bcc-L8-cud"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pun-mA-fZk" secondAttribute="trailing" id="eSH-dl-woG"/>
                             <constraint firstItem="dVd-Yb-P0o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qae-Ol-GbR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pun-mA-fZk" secondAttribute="bottom" constant="25" id="vBb-ZH-rZl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pun-mA-fZk" secondAttribute="bottom" id="vBb-ZH-rZl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="TuG-nU-X7H"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="pun-mA-fZk" id="L6l-3m-e9V"/>
+                        <segue destination="2Hv-Pr-UkE" kind="show" identifier="showBadge" id="nVd-me-KvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
