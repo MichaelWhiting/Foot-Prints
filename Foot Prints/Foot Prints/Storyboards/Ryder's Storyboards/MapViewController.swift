@@ -37,12 +37,28 @@ class MapViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.loadLocations()
         }
+        
     }
     
     func readLocations() {
         let db = Firestore.firestore()
         
         let readingRef = db.collection("Locations")
+        readingRef.addSnapshotListener { snapshot, error in
+            guard let snapshot = snapshot else {
+                print("\(error)")
+                return
+            }
+            print("Snapshot Listener Triggered 🔁")
+            self.locations = []
+            for document in snapshot.documents {
+                let data = document.data()
+                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0)
+                self.locations.append(newLocation)
+//                print("added location: \(newLocation.name)")
+            }
+            self.loadLocations()
+        }
         readingRef.getDocuments { snapshot, error in
             if let error {
                 print("There was an error reading from document: Locations")
@@ -50,7 +66,7 @@ class MapViewController: UIViewController {
                 for document in snapshot!.documents {
                     let data = document.data()
                     let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0)
-                    print("read . . . \(newLocation)")
+//                    print("read . . . \(newLocation)")
                     self.locations.append(newLocation)
                 }
             }
@@ -59,8 +75,10 @@ class MapViewController: UIViewController {
     }
     
     func loadLocations() {
+        mapView.removeAnnotations(annotations)
+        annotations = []
         for location in locations {
-            print("loading . . . \(location)")
+//            print("loading . . . \(location)")
             let annotation = MKPointAnnotation()
             annotation.title = location.name
             annotation.coordinate = CLLocationCoordinate2D(latitude: Double(location.latitude)!, longitude: Double(location.longitude)!)
@@ -68,27 +86,8 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(annotation)
         }
         print("annotations added")
+        print("\(locations) 🥸")
     }
-    
-    @IBAction func read(_ sender: Any) {
-        readLocations()
-    }
-    
-    @IBAction func load(_ sender: Any) {
-        loadLocations()
-    }
-    
-    @IBOutlet weak var latitude: UITextField!
-    @IBOutlet weak var longitude: UITextField!
-    @IBOutlet weak var name: UITextField!
-    
-    @IBAction func add(_ sender: Any) {
-        let annotation = MKPointAnnotation()
-        annotation.title = name.text
-        annotation.coordinate = CLLocationCoordinate2D(latitude: Double(latitude.text!)!, longitude: Double(longitude.text!)!)
-        mapView.addAnnotation(annotation)
-    }
-    
     
     private func configureLocationServices() {
         locationManager.delegate = self
@@ -141,10 +140,17 @@ extension MapViewController: CLLocationManagerDelegate {
     
 }
 
-// later add segue to new view using the annotation was selected
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("The annotation was selected: \(String(describing: view.annotation?.title))")
+        performSegue(withIdentifier: "showBadge", sender: annotations)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBadge" {
+            guard let vc = segue.destination as? LocationViewController else { return }
+            // right here I'll add all the information about this location that needs to be passed to the new view controller
+        }
     }
 }
