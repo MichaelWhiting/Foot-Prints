@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nh1-lS-hlU">
                                 <rect key="frame" x="0.0" y="372.66666666666674" width="393" height="479.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BadgeCell" id="eqo-Rz-HIv" customClass="BadgeTableViewCell" customModule="Foot_Prints" customModuleProvider="target">
@@ -53,7 +52,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pns-lI-KS6">
                                                             <rect key="frame" x="156" y="0.0" width="41.333333333333343" height="50.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-pO-0lC">
@@ -85,7 +84,7 @@
                                                 <constraint firstItem="dmw-Dn-QO5" firstAttribute="top" secondItem="eKp-eY-xOZ" secondAttribute="top" constant="10" id="lIz-Pb-xYb"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.93638392859999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="nameOfBadge" destination="pns-lI-KS6" id="ljZ-4S-nK5"/>
                                         </connections>
@@ -146,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="13"/>
+            <point key="canvasLocation" x="1112" y="44"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5H2-Eu-fSt">
@@ -156,13 +155,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo1" translatesAutoresizingMaskIntoConstraints="NO" id="ENy-40-3qo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1" translatesAutoresizingMaskIntoConstraints="NO" id="ENy-40-3qo">
                                 <rect key="frame" x="0.0" y="103" width="393" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="nUa-c2-oRK"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-n2-b5k">
-                                <rect key="frame" x="102" y="380" width="190" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-n2-b5k">
+                                <rect key="frame" x="101.66666666666669" y="383" width="190" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7nw-GU-1ko"/>
+                                    <constraint firstAttribute="width" constant="190" id="b06-H7-HGk"/>
+                                </constraints>
                                 <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CHANGE PASSWORD">
@@ -172,28 +176,40 @@
                                     <action selector="changePassword:" destination="CFS-tV-6ob" eventType="touchUpInside" id="f0K-um-nzH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-bU-P9Y">
-                                <rect key="frame" x="102" y="438" width="189.66666666666674" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-bU-P9Y">
+                                <rect key="frame" x="101.66666666666669" y="443" width="190" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="faG-10-Lgo"/>
+                                    <constraint firstAttribute="height" constant="35" id="u7m-b3-Qhm"/>
+                                </constraints>
                                 <color key="tintColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SIGN OUT">
                                     <color key="baseBackgroundColor" red="0.027450980390000001" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signOut:" destination="CFS-tV-6ob" eventType="touchUpInside" id="38f-oc-URd"/>
+                                    <action selector="signOut:" destination="yXh-AW-IYW" eventType="touchUpInside" id="CnX-Zv-EK0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zrz-X1-0sL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ENy-40-3qo" firstAttribute="top" secondItem="Zrz-X1-0sL" secondAttribute="top" id="KCR-Eg-9dX"/>
+                            <constraint firstItem="iD9-n2-b5k" firstAttribute="top" secondItem="ENy-40-3qo" secondAttribute="bottom" constant="45" id="TCr-Am-Tdi"/>
+                            <constraint firstItem="qZP-bU-P9Y" firstAttribute="centerX" secondItem="2KK-YW-VpR" secondAttribute="centerX" id="aPr-uc-qVZ"/>
+                            <constraint firstItem="iD9-n2-b5k" firstAttribute="centerX" secondItem="2KK-YW-VpR" secondAttribute="centerX" id="mZp-ZP-hT1"/>
+                            <constraint firstItem="qZP-bU-P9Y" firstAttribute="top" secondItem="iD9-n2-b5k" secondAttribute="bottom" constant="25" id="oEI-9N-LiR"/>
+                            <constraint firstItem="ENy-40-3qo" firstAttribute="leading" secondItem="Zrz-X1-0sL" secondAttribute="leading" id="pVx-bf-JRZ"/>
+                            <constraint firstItem="ENy-40-3qo" firstAttribute="trailing" secondItem="Zrz-X1-0sL" secondAttribute="trailing" id="pkm-OS-efs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="umy-SV-t5X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHj-rL-des" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="CFS-tV-6ob" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1997.709923664122" y="63.380281690140848"/>
+            <point key="canvasLocation" x="1958" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8i-u8-9C5">
@@ -222,8 +238,5 @@
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo1" width="799" height="554"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
