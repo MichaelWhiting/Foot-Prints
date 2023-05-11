@@ -59,10 +59,9 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         ref.addDocument(data: ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1])
         
         print("latitude: \(latitude), longitude: \(longitude)")
-        
     }
     
-
+    
     /*
     // MARK: - Navigation
 
