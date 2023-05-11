@@ -133,11 +133,9 @@
                     </view>
                     <connections>
                         <outlet property="Locationslabel" destination="pAK-gP-Tu2" id="hBY-uZ-ziX"/>
-                        <outlet property="NumberThisBadgeLabel" destination="QxH-SV-QQ7" id="e9U-RP-arG"/>
                         <outlet property="UserstableView" destination="mRh-Sn-cXP" id="E9S-bL-mfe"/>
                         <outlet property="collectBadgeNumberLabel" destination="QxH-SV-QQ7" id="nex-p8-YEO"/>
                         <outlet property="difficultyRatingSlider" destination="xD7-mT-3rN" id="EBD-WC-VCm"/>
-                        <outlet property="peoplecollectedbadgelabel" destination="QxH-SV-QQ7" id="S8n-ap-l6l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjW-L9-jdV" sceneMemberID="firstResponder"/>
