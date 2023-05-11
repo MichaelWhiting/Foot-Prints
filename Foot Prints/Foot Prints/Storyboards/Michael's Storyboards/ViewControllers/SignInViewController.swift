@@ -7,7 +7,11 @@
 
 import UIKit
 import SwiftUI
+
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+import Firebase
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,6 +21,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
         loadingIcon.isHidden = true
     }
     
@@ -24,13 +30,19 @@ class SignInViewController: UIViewController {
 
         loadingIcon.isHidden = false
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
-        
 
         signIn(email: emailStr, password: passwordStr)
     }
     
     @IBSegueAction func loadingIconSwiftUI(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: CustomLoadCircle())
+    }
+}
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 
