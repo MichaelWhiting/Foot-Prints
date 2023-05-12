@@ -150,7 +150,7 @@ extension MapViewController: MKMapViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBadge" {
             guard let vc = segue.destination as? LocationViewController else { return }
-            // right here I'll add all the information about this location that needs to be passed to the new view controller
+            vc.locationlabel.text = String(describing: view.annotation?.title)
         }
     }
 }

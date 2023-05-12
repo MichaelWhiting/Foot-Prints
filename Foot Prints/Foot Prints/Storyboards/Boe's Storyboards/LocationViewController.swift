@@ -20,8 +20,8 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         // Set the table view's delegate and data source to self
-        UserstableView.delegate = self
-        UserstableView.dataSource = self
+//        UserstableView.delegate = self
+//        UserstableView.dataSource = self
     }
     
     // MARK: - Table view data source methods
@@ -59,7 +59,7 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     class UsersTableViewCell: UITableViewCell {
         @IBOutlet weak var Userslabel: UILabel!
     }
-    @IBOutlet weak var Locationslabel: UILabel!
+    @IBOutlet weak var locationlabel: UILabel!
 }
 
 
