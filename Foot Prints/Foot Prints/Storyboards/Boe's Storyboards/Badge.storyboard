@@ -24,6 +24,9 @@
                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.027450980390000001" green="0.98039215690000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="RatingSlider:" destination="kOC-8k-P5A" eventType="valueChanged" id="bZk-h4-OZu"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9l-Lc-0wc">
                                 <rect key="frame" x="10" y="709" width="400" height="88"/>
@@ -41,6 +44,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                     <color key="baseBackgroundColor" red="0.26666666666666666" green="0.79607843137254897" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="Addthisbadgebutton:" destination="kOC-8k-P5A" eventType="touchUpInside" id="7nA-Zp-YUB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="People have collected this badge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-ms-DT9">
                                 <rect key="frame" x="5" y="435" width="410" height="63"/>
@@ -123,6 +129,11 @@
                             <constraint firstItem="6TK-zZ-QZ4" firstAttribute="trailing" secondItem="Vwf-53-lqT" secondAttribute="trailing" constant="20" id="yW9-pw-iNi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Locationslabel" destination="pAK-gP-Tu2" id="0n4-8x-Xda"/>
+                        <outlet property="UserstableView" destination="mRh-Sn-cXP" id="Uhw-jL-izx"/>
+                        <outlet property="collectBadgeNumberLabel" destination="QxH-SV-QQ7" id="c7r-Y7-nSp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjW-L9-jdV" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +163,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                     <color key="baseBackgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="NextButtonPressed:" destination="6qN-mV-7H1" eventType="touchUpInside" id="JmH-g1-Vfq"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-dL-bES">
                                 <rect key="frame" x="8" y="652" width="414" height="31"/>
