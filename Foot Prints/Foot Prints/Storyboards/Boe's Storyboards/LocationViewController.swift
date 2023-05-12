@@ -12,6 +12,8 @@ import Firebase
 
 class LocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var locationID: String
+    
     var dataSource: [String] = ["Item 1", "Item2", "Item3"]
     
     @IBOutlet weak var UserstableView: UITableView!
@@ -59,7 +61,27 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     class UsersTableViewCell: UITableViewCell {
         @IBOutlet weak var Userslabel: UILabel!
     }
-    @IBOutlet weak var locationlabel: UILabel!
+    @IBOutlet weak var Locationslabel: UILabel!
+}
+
+extension LocationViewController {
+    // MARK: Firebase Functions
+    
+    func loadLocationInfo(from locationID: String) {
+        let db = Firestore.firestore()
+        let locationsRef = db.collection("Locations")
+        
+        locationsRef.whereField("locationID", isEqualTo: locationID).getDocuments {  snapshot, error in
+            if let error {
+                print(error.localizedDescription)
+            } else {
+                for document in snapshot!.documents {
+                    let data: [String: Any] = document.data()
+                    self.location = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String)
+                }
+            }
+        }
+    }
 }
 
 
