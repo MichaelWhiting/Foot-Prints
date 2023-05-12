@@ -12,7 +12,8 @@ import Firebase
 
 class LocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var locationID: String
+    var newLocationID: String?
+    var newLocation: Location?
     
     var dataSource: [String] = ["Item 1", "Item2", "Item3"]
     
@@ -76,8 +77,10 @@ extension LocationViewController {
                 print(error.localizedDescription)
             } else {
                 for document in snapshot!.documents {
-                    let data: [String: Any] = document.data()
-                    self.location = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String)
+                    if self.newLocationID != nil {
+                        let data: [String: Any] = document.data()
+                        self.newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String)
+                    }
                 }
             }
         }

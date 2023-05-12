@@ -18,9 +18,12 @@ struct Location {
     let latitude: String
     let longitude: String
     let sliderRating: Double
+    let locationID: String
 }
 
 class MapViewController: UIViewController {
+    
+    var locationID = ""
     
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
@@ -53,7 +56,7 @@ class MapViewController: UIViewController {
             self.locations = []
             for document in snapshot.documents {
                 let data = document.data()
-                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0)
+                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "")
                 self.locations.append(newLocation)
 //                print("added location: \(newLocation.name)")
             }
@@ -65,7 +68,7 @@ class MapViewController: UIViewController {
             } else {
                 for document in snapshot!.documents {
                     let data = document.data()
-                    let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0)
+                    let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "")
 //                    print("read . . . \(newLocation)")
                     self.locations.append(newLocation)
                 }
@@ -86,7 +89,7 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(annotation)
         }
         print("annotations added")
-        print("\(locations) 🥸")
+        print("\(locations)")
     }
     
     private func configureLocationServices() {
@@ -144,7 +147,14 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("The annotation was selected: \(String(describing: view.annotation?.title))")
-        performSegue(withIdentifier: "showBadge", sender: annotations)
+        getLocationID(selectedAnnotation: view) { result in
+            switch result {
+            case .success(let id):
+                self.performSegue(withIdentifier: "showBadge", sender: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -152,8 +162,28 @@ extension MapViewController: MKMapViewDelegate {
             guard let vc = segue.destination as? LocationViewController else { return }
 //            vc.locationlabel.text = String(describing: view.annotation?.title)
 
-            vc.Locationslabel.text = "bruh"
-
         }
     }
+    
+    func getLocationID(selectedAnnotation: MKAnnotationView, completion: @escaping (Result<String, Error>) -> Void) {
+        let db = Firestore.firestore()
+        var returnID = ""
+        let locationsReference = db.collection("Locations")
+        locationsReference.whereField("latitude", isEqualTo: selectedAnnotation.annotation?.coordinate.latitude ?? 0).getDocuments { snapshot, error in
+            if let error {
+                completion(.failure(error))
+            } else {
+                do {
+                    for document in snapshot!.documents {
+                        let data = document.data()
+                        returnID = data["locationID"] as! String
+                    }
+                    completion(.success(returnID))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
 }
