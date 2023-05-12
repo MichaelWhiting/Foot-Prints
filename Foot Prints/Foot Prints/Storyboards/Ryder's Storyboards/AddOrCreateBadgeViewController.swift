@@ -56,9 +56,10 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
     }
     
     @IBAction func addBadgePressed(_ sender: Any) {
+        let locationID = UUID().uuidString
         let db = Firestore.firestore()
         let ref = db.collection("Locations")
-        ref.addDocument(data: ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1])
+        ref.addDocument(data: ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1, "locationID": locationID])
         
         print("latitude: \(latitude), longitude: \(longitude)")
     }
