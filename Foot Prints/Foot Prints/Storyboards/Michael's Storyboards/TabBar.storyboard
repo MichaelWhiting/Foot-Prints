@@ -40,7 +40,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mw2-3t-y8C">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="WJY-UT-9Pq" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="WJY-UT-9Pq" customClass="TabBarController" customModule="Foot_Prints" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zJD-wo-xEA" customClass="CustomTabBar" customModule="Foot_Prints" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
