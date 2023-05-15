@@ -52,6 +52,23 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func RatingSlider(_ sender: UISlider) {
     }
     @IBAction func Addthisbadgebutton(_ sender: Any) {
+        let db = Firestore.firestore()
+        let userRef = db.collection("Users").document(Auth.auth().currentUser!.uid)
+        let locationsRef = db.collection("Locations")
+        
+        locationsRef.whereField("locationID", isEqualTo: newLocationID!).getDocuments {  snapshot, error in
+            if let error {
+                print(error.localizedDescription)
+            } else {
+                for document in snapshot!.documents {
+                    if self.newLocationID != nil {
+                        let data: [String: Any] = document.data()
+                        userRef.collection("CollectedBadges").addDocument(data: data)
+                    }
+                }
+            }
+        }
+        
     }
     
     // Implement any necessary table view delegate methods here
