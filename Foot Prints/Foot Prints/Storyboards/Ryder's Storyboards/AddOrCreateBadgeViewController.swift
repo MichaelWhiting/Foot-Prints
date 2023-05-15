@@ -59,7 +59,13 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         let locationID = UUID().uuidString
         let db = Firestore.firestore()
         let ref = db.collection("Locations")
-        ref.addDocument(data: ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1, "locationID": locationID])
+        let userRef = db.collection("Users").document(Auth.auth().currentUser!.uid)
+        let data: [String : Any] = ["longitude": longitude, "latitude": latitude, "name": locationNameTextField.text ?? "", "sliderRating": ratingSlider.value, "amountVisited": 1, "locationID": locationID]
+        
+        
+        ref.addDocument(data: data)
+        
+        userRef.collection("CollectedBadges").addDocument(data: data)
         
         print("latitude: \(latitude), longitude: \(longitude)")
     }
