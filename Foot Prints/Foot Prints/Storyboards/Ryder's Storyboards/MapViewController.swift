@@ -23,12 +23,8 @@ struct Location {
 
 class MapViewController: UIViewController {
     
-<<<<<<< HEAD
     var locationID = ""
-    
-=======
-    static var findLocation = false
->>>>>>> 56d90e9 (location zooms bro)
+
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
     var locations: [Location] = []
