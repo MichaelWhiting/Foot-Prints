@@ -23,8 +23,12 @@ struct Location {
 
 class MapViewController: UIViewController {
     
+<<<<<<< HEAD
     var locationID = ""
     
+=======
+    static var findLocation = false
+>>>>>>> 56d90e9 (location zooms bro)
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
     var locations: [Location] = []
@@ -40,7 +44,7 @@ class MapViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.loadLocations()
         }
-        
+//        self.tabBarController?.delegate = self
     }
     
     func readLocations() {
@@ -111,7 +115,7 @@ class MapViewController: UIViewController {
         
     }
     
-    private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
+    func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
         
         let zoomRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
         mapView.setRegion(zoomRegion, animated: true)
@@ -187,3 +191,5 @@ extension MapViewController: MKMapViewDelegate {
     }
     
 }
+
+

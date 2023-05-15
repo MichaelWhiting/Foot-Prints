@@ -41,6 +41,7 @@
 		FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */; };
 		FDEB3A942A056102001E5715 /* SettingsPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */; };
 		FDEB3A962A0BE58D001E5715 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */; };
+		FDEB3AB42A1279DC001E5715 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB3AB32A1279DC001E5715 /* TabBarController.swift */; };
 		FDF137782A000E1C00AC7B7E /* AccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 		FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresentationController.swift; sourceTree = "<group>"; };
 		FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FDEB3AB32A1279DC001E5715 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Foot Prints/TabBarController.swift"; sourceTree = SOURCE_ROOT; };
 		FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 				FD9CCF4D2A015D53009998A9 /* BadgeTableViewCell.swift */,
 				FDEB3A932A056102001E5715 /* SettingsPresentationController.swift */,
 				FDF137772A000E1C00AC7B7E /* AccountPageViewController.swift */,
+				FDEB3AB32A1279DC001E5715 /* TabBarController.swift */,
 				FDEB3A952A0BE58D001E5715 /* SettingsViewController.swift */,
 			);
 			path = "Nelson's Storyboard";
@@ -299,6 +302,7 @@
 				31E060F92A04047500DB1AAC /* LocationPresentionViewController.swift in Sources */,
 				6E7C183829ED94A600960CA3 /* TestViewController.swift in Sources */,
 				973DF9772A00199000A35E47 /* AddOrCreateBadgeViewController.swift in Sources */,
+				FDEB3AB42A1279DC001E5715 /* TabBarController.swift in Sources */,
 				FD9CCF4E2A015D53009998A9 /* BadgeTableViewCell.swift in Sources */,
 				6EC5D41D29F177F400288478 /* ForgotPasswordViewController.swift in Sources */,
 				FD18F5DE29EEE4BD001B99A5 /* CaptainRedBeard.swift in Sources */,

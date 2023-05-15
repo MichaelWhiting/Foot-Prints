@@ -18,9 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nh1-lS-hlU">
-                                <rect key="frame" x="0.0" y="372.66666666666674" width="393" height="479.33333333333326"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="367" width="393" height="485"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BadgeCell" id="eqo-Rz-HIv" customClass="BadgeTableViewCell" customModule="Foot_Prints" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="70.333335876464844"/>
@@ -47,6 +48,7 @@
                                                             </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="locationPage:" destination="eqo-Rz-HIv" eventType="touchUpInside" id="qKR-80-gSl"/>
+                                                                <action selector="toLocationPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7gT-U3-I55"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pns-lI-KS6">
@@ -67,6 +69,7 @@
                                                             </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="showLocation:" destination="eqo-Rz-HIv" eventType="touchUpInside" id="3A2-NP-vTJ"/>
+                                                                <action selector="toMapPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8vc-lC-NBW"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -92,10 +95,10 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-8G-sC9">
-                                <rect key="frame" x="112" y="115.99999999999999" width="169" height="221.66666666666663"/>
+                                <rect key="frame" x="117.66666666666669" y="116" width="158" height="216"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-32-3qh">
-                                        <rect key="frame" x="22" y="1" width="125" height="123.66666666666667"/>
+                                        <rect key="frame" x="16.333333333333329" y="1" width="124.99999999999999" height="123.66666666666667"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="aWt-xj-rn6"/>
@@ -103,18 +106,22 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@boe-bogdin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejw-V1-Y22">
-                                        <rect key="frame" x="0.0" y="126" width="169" height="44"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="32"/>
+                                        <rect key="frame" x="5" y="125.99999999999999" width="148" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="28"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-zq-a0E">
-                                        <rect key="frame" x="30" y="171" width="109" height="50.666666666666657"/>
+                                        <rect key="frame" x="24.333333333333329" y="165.33333333333331" width="108.99999999999999" height="50.666666666666657"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="37"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ejw-V1-Y22" secondAttribute="trailing" constant="5" id="8c6-ru-oDk"/>
+                                    <constraint firstItem="Ejw-V1-Y22" firstAttribute="leading" secondItem="cBd-8G-sC9" secondAttribute="leading" constant="5" id="rXf-Db-ctI"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
