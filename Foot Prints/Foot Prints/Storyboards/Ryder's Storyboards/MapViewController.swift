@@ -19,6 +19,7 @@ struct Location {
     let longitude: String
     let sliderRating: Double
     let locationID: String
+    let amountVisited: Int
 }
 
 class MapViewController: UIViewController {
@@ -56,7 +57,7 @@ class MapViewController: UIViewController {
             self.locations = []
             for document in snapshot.documents {
                 let data = document.data()
-                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "")
+                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "", amountVisited: data["amountVisited"] as! Int)
                 self.locations.append(newLocation)
 //                print("added location: \(newLocation.name)")
             }
@@ -68,7 +69,7 @@ class MapViewController: UIViewController {
             } else {
                 for document in snapshot!.documents {
                     let data = document.data()
-                    let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "")
+                    let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "", amountVisited: data["amountVisited"] as! Int)
 //                    print("read . . . \(newLocation)")
                     self.locations.append(newLocation)
                 }
@@ -150,6 +151,7 @@ extension MapViewController: MKMapViewDelegate {
         getLocationID(selectedAnnotation: view) { result in
             switch result {
             case .success(let id):
+                self.locationID = id
                 self.performSegue(withIdentifier: "showBadge", sender: nil)
             case .failure(let error):
                 print(error.localizedDescription)
@@ -161,7 +163,7 @@ extension MapViewController: MKMapViewDelegate {
         if segue.identifier == "showBadge" {
             guard let vc = segue.destination as? LocationViewController else { return }
 //            vc.locationlabel.text = String(describing: view.annotation?.title)
-
+            vc.newLocationID = locationID
         }
     }
     
@@ -169,7 +171,7 @@ extension MapViewController: MKMapViewDelegate {
         let db = Firestore.firestore()
         var returnID = ""
         let locationsReference = db.collection("Locations")
-        locationsReference.whereField("latitude", isEqualTo: selectedAnnotation.annotation?.coordinate.latitude ?? 0).getDocuments { snapshot, error in
+        locationsReference.whereField("latitude", isEqualTo: String(selectedAnnotation.annotation?.coordinate.latitude ?? 0)).getDocuments { snapshot, error in
             if let error {
                 completion(.failure(error))
             } else {

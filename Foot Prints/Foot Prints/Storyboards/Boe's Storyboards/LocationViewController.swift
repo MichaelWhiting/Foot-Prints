@@ -21,7 +21,7 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadLocationInfo(from: newLocationID ?? "test")
         // Set the table view's delegate and data source to self
 //        UserstableView.delegate = self
 //        UserstableView.dataSource = self
@@ -79,8 +79,11 @@ extension LocationViewController {
                 for document in snapshot!.documents {
                     if self.newLocationID != nil {
                         let data: [String: Any] = document.data()
-                        self.newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String)
+                        self.newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String, amountVisited: data["amountVisited"] as! Int)
                     }
+                    self.Locationslabel.text = self.newLocation?.name
+                    self.collectBadgeNumberLabel.text = String(self.newLocation?.amountVisited ?? 0)
+//                    self.ratingSlider.value = self.newLocation?.sliderRating
                 }
             }
         }
