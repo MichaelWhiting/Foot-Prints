@@ -31,12 +31,8 @@ class SignInViewController: UIViewController {
         loadingIcon.isHidden = false
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
 
-<<<<<<< HEAD
-//        signIn(email: emailStr, password: passwordStr)
-        signIn(email: "ryder.claybaugh@gmail.com", password: "Wreckage123")
-=======
-        signIn(email: "nelson.a.pierce@gmail.com", password: passwordStr)
->>>>>>> 56d90e9 (location zooms bro)
+
+        signIn(email: emailStr, password: passwordStr)
     }
     
     @IBSegueAction func loadingIconSwiftUI(_ coder: NSCoder) -> UIViewController? {
