@@ -15,11 +15,11 @@ import MapKit
 
 class AccountPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var locations: [Location] = []
+    
     //MARK: Outlets
     @IBOutlet weak var nameOfUser: UILabel!
     @IBOutlet weak var badgeTableView: UITableView!
-    
-    var names:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +31,12 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return locations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BadgeCell", for: indexPath) as! BadgeTableViewCell
-        let name = names[indexPath.row]
+        let name = locations[indexPath.row].name
         cell.nameOfBadge.text! = name
         
         return cell
@@ -55,16 +55,13 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
                 print("Error")
             } else {
                 for document in snapshot!.documents {
-                    for result in document.data() {
-                        print(document.data())
-                        self.names.append("\(result.value)")
-                        print(self.names)
-                    }
+                    let data: [String: Any] = document.data()
+                    let decodedLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as! Double, locationID: data["locationID"] as! String, amountVisited: data["amountVisited"] as! Int)
+                    self.locations.append(decodedLocation)
                 }
             }
             self.badgeTableView.reloadData()
         }
-        
     }
     
     func getUserEmail() {
@@ -105,7 +102,8 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func toMapPage(_ sender: UIButton) {
         
-        var cooridinate = CLLocationCoordinate2D(latitude: .init(40.7127281), longitude: .init(-74.0060152))
+        var selectedLocation = locations[0]
+        var cooridinate = CLLocationCoordinate2D(latitude: .init(Double(selectedLocation.latitude)!), longitude: .init(Double(selectedLocation.longitude)!))
         
         guard let tabBarController = self.tabBarController as? TabBarController else { 
             fatalError("expected TabBarController instead of UITabBarController!")
