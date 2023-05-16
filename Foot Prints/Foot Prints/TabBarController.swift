@@ -26,12 +26,9 @@ class TabBarController: UITabBarController {
         let vc = viewControllers?[tab] as? MapViewController
         vc?.zoomToLatestLocation(with: location)
     }
-<<<<<<< HEAD
-=======
 
     func goToMap() {
         let tab = Tab.map.rawValue
         selectedIndex = tab
       }
->>>>>>> 7f26f1a (button edits and other stuff)
 }
