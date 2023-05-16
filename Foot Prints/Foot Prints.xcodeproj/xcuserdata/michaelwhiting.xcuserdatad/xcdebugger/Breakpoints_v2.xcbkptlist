@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AABCB2CC-B666-4FE6-A2E0-60CA1386BF55"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "834E2E53-E6A0-4A72-BA95-5EFD4596EFD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foot Prints/Storyboards/Nelson&apos;s Storyboard/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "signOut(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2736CDF-DE30-4961-BC4B-4989E9595AF8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foot Prints/Storyboards/Ryder&apos;s Storyboards/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "readLocations()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C2736CDF-DE30-4961-BC4B-4989E9595AF8 - f2b1309ae8bcd360"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Foot_Prints.MapViewController.readLocations() -&gt; ()"
+                  moduleName = "Foot Prints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelwhiting/Desktop/Foot-Prints-GroupCapstone/Foot%20Prints/Foot%20Prints/Storyboards/Ryder&apos;s%20Storyboards/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+               <Location
+                  uuid = "C2736CDF-DE30-4961-BC4B-4989E9595AF8 - f2b1309ae8bcd360"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Foot_Prints.MapViewController.readLocations() -&gt; ()"
+                  moduleName = "Foot Prints"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michaelwhiting/Desktop/Foot-Prints-GroupCapstone/Foot%20Prints/Foot%20Prints/Storyboards/Ryder&apos;s%20Storyboards/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1968">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
