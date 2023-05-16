@@ -63,6 +63,8 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
                 for document in snapshot!.documents {
                     if self.newLocationID != nil {
                         let data: [String: Any] = document.data()
+                        let currentAmountVisited = data["amountVisited"] as? Int ?? 0
+                        locationsRef.document(document.documentID).updateData(["amountVisited": currentAmountVisited + 1])
                         userRef.collection("CollectedBadges").addDocument(data: data)
                     }
                 }

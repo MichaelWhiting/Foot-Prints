@@ -11,8 +11,12 @@ class BadgeTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var nameOfBadge: UILabel!
+<<<<<<< HEAD
     @IBOutlet weak var mapButtonOutlet: UIButton!
         
+=======
+    
+>>>>>>> 448ac88 (bugFixesAndAmountVisited)
     override func awakeFromNib() {
         super.awakeFromNib()
                     
@@ -34,6 +38,7 @@ class BadgeTableViewCell: UITableViewCell {
     }
     
     @IBAction func showLocation(_ sender: UIButton) {
+        
     }
     
 

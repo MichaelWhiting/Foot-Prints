@@ -115,9 +115,14 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func toMapPage(_ sender: UIButton) {
         
+<<<<<<< HEAD
         // get the cell row of this button when tapped go to the correct map location
         print(sender.tag)
         var selectedLocation = locations[sender.tag]
+=======
+        var selectedLocation = locations[0]
+        
+>>>>>>> 448ac88 (bugFixesAndAmountVisited)
         var cooridinate = CLLocationCoordinate2D(latitude: .init(Double(selectedLocation.latitude)!), longitude: .init(Double(selectedLocation.longitude)!))
 
         guard let tabBarController = self.tabBarController as? TabBarController else {
