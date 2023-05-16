@@ -26,5 +26,4 @@ class TabBarController: UITabBarController {
         let vc = viewControllers?[tab] as? MapViewController
         vc?.zoomToLatestLocation(with: location)
     }
-
 }
