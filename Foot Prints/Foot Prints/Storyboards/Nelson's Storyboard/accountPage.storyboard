@@ -69,7 +69,7 @@
                                                             </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="showLocation:" destination="eqo-Rz-HIv" eventType="touchUpInside" id="3A2-NP-vTJ"/>
-                                                                <action selector="toMapPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8vc-lC-NBW"/>
+                                                                <action selector="toMapPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kaN-lQ-Unu"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -89,6 +89,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="mapButtonOutlet" destination="wLz-pO-0lC" id="bJc-JW-zJc"/>
                                             <outlet property="nameOfBadge" destination="pns-lI-KS6" id="ljZ-4S-nK5"/>
                                         </connections>
                                     </tableViewCell>

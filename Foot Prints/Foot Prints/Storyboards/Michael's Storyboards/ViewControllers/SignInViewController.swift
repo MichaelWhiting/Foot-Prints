@@ -32,7 +32,7 @@ class SignInViewController: UIViewController {
         guard var emailStr = emailTextField.text, var passwordStr = passwordTextField.text else { return }
 
 
-        signIn(email: "nelson.a.pierce@gmail.com", password: passwordStr)
+        signIn(email: "nelson.a.pierce@gmail.com", password: "123456789")
     }
     
     @IBSegueAction func loadingIconSwiftUI(_ coder: NSCoder) -> UIViewController? {

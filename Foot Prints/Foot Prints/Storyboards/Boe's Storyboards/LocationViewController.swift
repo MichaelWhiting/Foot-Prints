@@ -66,9 +66,9 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
                         userRef.collection("CollectedBadges").addDocument(data: data)
                     }
                 }
+                self.dismiss(animated: true)
             }
         }
-        
     }
     
     // Implement any necessary table view delegate methods here

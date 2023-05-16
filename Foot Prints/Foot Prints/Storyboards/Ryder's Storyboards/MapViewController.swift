@@ -57,7 +57,7 @@ class MapViewController: UIViewController {
             self.locations = []
             for document in snapshot.documents {
                 let data = document.data()
-                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "", amountVisited: data["amountVisited"] as! Int)
+                let newLocation = Location(name: data["name"] as! String, latitude: data["latitude"] as! String, longitude: data["longitude"] as! String, sliderRating: data["sliderRating"] as? Double ?? 0.0, locationID: data["locationID"] as? String ?? "", amountVisited: data["amountVisited"] as? Int ?? 0)
                 self.locations.append(newLocation)
 //                print("added location: \(newLocation.name)")
             }

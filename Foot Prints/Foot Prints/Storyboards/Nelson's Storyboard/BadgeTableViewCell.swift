@@ -11,22 +11,22 @@ class BadgeTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var nameOfBadge: UILabel!
-    
-    
-    
+    @IBOutlet weak var mapButtonOutlet: UIButton!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        
-        
+                    
     }
 
+    func updateCell(with row: Int) {
+        
+        mapButtonOutlet.tag = row
+        
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     @IBAction func locationPage(_ sender: UIButton) {
