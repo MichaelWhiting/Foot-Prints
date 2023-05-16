@@ -67,6 +67,12 @@ class AddOrCreateBadgeViewController: UIViewController, CLLocationManagerDelegat
         
         userRef.collection("CollectedBadges").addDocument(data: data)
         
+        guard let tabBarController = self.tabBarController as? TabBarController else {
+            fatalError("expected TabBarController instead of UITabBarController!")
+        }
+        
+        tabBarController.goToMap()
+        
         print("latitude: \(latitude), longitude: \(longitude)")
     }
 }
