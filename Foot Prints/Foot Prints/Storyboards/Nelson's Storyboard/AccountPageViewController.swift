@@ -21,6 +21,9 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var nameOfUser: UILabel!
     @IBOutlet weak var badgeTableView: UITableView!
     
+    private var refreshControl = UIRefreshControl()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         badgeTableView.delegate = self
@@ -28,6 +31,10 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         getUserData()
         getUserEmail()
         
+        badgeTableView.refreshControl = refreshControl
+        
+        badgeTableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+                
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +45,7 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "BadgeCell", for: indexPath) as! BadgeTableViewCell
         let name = locations[indexPath.row].name
         cell.nameOfBadge.text! = name
-        
+        cell.updateCell(with: indexPath.row)
         return cell
     }
     
@@ -46,6 +53,13 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    @objc func refresh(sender:AnyObject) {
+        locations = []
+        getUserData()
+        self.badgeTableView.refreshControl?.endRefreshing()
+    }
+    
+    //MARK: we need to refresh this
     func getUserData() {
         let db = Firestore.firestore()
         let ref = db.collection("Users").document("\(Auth.auth().currentUser!.uid)").collection("CollectedBadges")
@@ -99,18 +113,19 @@ class AccountPageViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    
     @IBAction func toMapPage(_ sender: UIButton) {
         
-        var selectedLocation = locations[0]
+        // get the cell row of this button when tapped go to the correct map location
+        print(sender.tag)
+        var selectedLocation = locations[sender.tag]
         var cooridinate = CLLocationCoordinate2D(latitude: .init(Double(selectedLocation.latitude)!), longitude: .init(Double(selectedLocation.longitude)!))
-        
-        guard let tabBarController = self.tabBarController as? TabBarController else { 
+
+        guard let tabBarController = self.tabBarController as? TabBarController else {
             fatalError("expected TabBarController instead of UITabBarController!")
         }
-        
+
         tabBarController.navigate(to: cooridinate)
-        
+
     }
     
 }
