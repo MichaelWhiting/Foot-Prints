@@ -49,8 +49,9 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var collectBadgeNumberLabel: UILabel!
     // MARK: - Table view delegate methods
-    @IBAction func RatingSlider(_ sender: UISlider) {
-    }
+    
+    @IBOutlet weak var ratingSlider: UISlider!
+    
     @IBAction func Addthisbadgebutton(_ sender: Any) {
         let db = Firestore.firestore()
         let userRef = db.collection("Users").document(Auth.auth().currentUser!.uid)
