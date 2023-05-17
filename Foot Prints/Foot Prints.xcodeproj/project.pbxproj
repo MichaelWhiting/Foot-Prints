@@ -447,11 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 44ACMKKR6R;
-=======
-				DEVELOPMENT_TEAM = 3Z3YP89VS7;
->>>>>>> ae231a0 (new constraints)
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
@@ -482,11 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 44ACMKKR6R;
-=======
-				DEVELOPMENT_TEAM = 3Z3YP89VS7;
->>>>>>> ae231a0 (new constraints)
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Foot Prints/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
